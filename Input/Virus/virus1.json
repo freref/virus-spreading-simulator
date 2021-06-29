@@ -1,0 +1,10 @@
+{
+  "besmettingsgraad": 0.5,
+  "sterftegraad": 0.02,
+  "incubatietijd": 7,
+  "%ziekte": 0.5,
+  "incubatie?": 1,
+  "asymptomatisch?": 0,
+  "%mutatie": 0.10,
+  "range": [0.05, 1]
+}

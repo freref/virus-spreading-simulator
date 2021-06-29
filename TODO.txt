@@ -1,0 +1,18 @@
+VIRUS:
+    - besmettingsgraad: laat de interne klok tijd 'trager' of 'sneller' gaan (value groter dan 0)
+    - sterftegraad: kans dat een state een dode state wordt (tussen 0 en 1)
+    - incubatietijd: aantal interne klokslagen dat het duurt voor je pottentiel ziek wordt (groter dan 0)
+    - kans op ziekte: rand multiplicatie checken of sterftegrens, asymptomatische grens en hospitalisatie grens (tussen 0 en 1)
+    - besmettelijk tijdens incubatie: 0 of 1
+    - besmettelijk wanneer asymptomatisch: 0 of 1
+    - kans op mutatie: (tussen 0 en 1)
+    - range van mutatie: de percentage verandering die een mutie kan toebrengen (twee getallen groter dan 0)
+
+WORLD:
+    - populatie: het aantal mensen in de world (getal groter dan 0)
+    - bevolkingsdichtheid: gemiddelde tijd tussen mensen
+    - gezondheidsgraad: verlaagt kans op sterven en hospitalisatie (hoe hoger hoe ongezonder)
+    - agrens: asympotmatisch kleiner dan
+    - zgrens: ziekte kleiner dan
+    - hgrens: hospitalisatie kleiner dan
+    - sgrens: sterfte kleiner dan
