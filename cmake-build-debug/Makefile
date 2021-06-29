@@ -143,113 +143,221 @@ VSS/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/build
 .PHONY : VSS/fast
 
-Automata/Frederic/DFA.o: Automata/Frederic/DFA.cpp.o
+Automata/Working/DFA.o: Automata/Working/DFA.cpp.o
 
-.PHONY : Automata/Frederic/DFA.o
-
-# target to build an object file
-Automata/Frederic/DFA.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/Automata/Frederic/DFA.cpp.o
-.PHONY : Automata/Frederic/DFA.cpp.o
-
-Automata/Frederic/DFA.i: Automata/Frederic/DFA.cpp.i
-
-.PHONY : Automata/Frederic/DFA.i
-
-# target to preprocess a source file
-Automata/Frederic/DFA.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/Automata/Frederic/DFA.cpp.i
-.PHONY : Automata/Frederic/DFA.cpp.i
-
-Automata/Frederic/DFA.s: Automata/Frederic/DFA.cpp.s
-
-.PHONY : Automata/Frederic/DFA.s
-
-# target to generate assembly for a file
-Automata/Frederic/DFA.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/Automata/Frederic/DFA.cpp.s
-.PHONY : Automata/Frederic/DFA.cpp.s
-
-Automata/Frederic/ENFA.o: Automata/Frederic/ENFA.cpp.o
-
-.PHONY : Automata/Frederic/ENFA.o
+.PHONY : Automata/Working/DFA.o
 
 # target to build an object file
-Automata/Frederic/ENFA.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/Automata/Frederic/ENFA.cpp.o
-.PHONY : Automata/Frederic/ENFA.cpp.o
+Automata/Working/DFA.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/Automata/Working/DFA.cpp.o
+.PHONY : Automata/Working/DFA.cpp.o
 
-Automata/Frederic/ENFA.i: Automata/Frederic/ENFA.cpp.i
+Automata/Working/DFA.i: Automata/Working/DFA.cpp.i
 
-.PHONY : Automata/Frederic/ENFA.i
+.PHONY : Automata/Working/DFA.i
 
 # target to preprocess a source file
-Automata/Frederic/ENFA.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/Automata/Frederic/ENFA.cpp.i
-.PHONY : Automata/Frederic/ENFA.cpp.i
+Automata/Working/DFA.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/Automata/Working/DFA.cpp.i
+.PHONY : Automata/Working/DFA.cpp.i
 
-Automata/Frederic/ENFA.s: Automata/Frederic/ENFA.cpp.s
+Automata/Working/DFA.s: Automata/Working/DFA.cpp.s
 
-.PHONY : Automata/Frederic/ENFA.s
+.PHONY : Automata/Working/DFA.s
 
 # target to generate assembly for a file
-Automata/Frederic/ENFA.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/Automata/Frederic/ENFA.cpp.s
-.PHONY : Automata/Frederic/ENFA.cpp.s
+Automata/Working/DFA.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/Automata/Working/DFA.cpp.s
+.PHONY : Automata/Working/DFA.cpp.s
 
-Automata/Frederic/NFA.o: Automata/Frederic/NFA.cpp.o
+Automata/Working/ENFA.o: Automata/Working/ENFA.cpp.o
 
-.PHONY : Automata/Frederic/NFA.o
+.PHONY : Automata/Working/ENFA.o
 
 # target to build an object file
-Automata/Frederic/NFA.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/Automata/Frederic/NFA.cpp.o
-.PHONY : Automata/Frederic/NFA.cpp.o
+Automata/Working/ENFA.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/Automata/Working/ENFA.cpp.o
+.PHONY : Automata/Working/ENFA.cpp.o
 
-Automata/Frederic/NFA.i: Automata/Frederic/NFA.cpp.i
+Automata/Working/ENFA.i: Automata/Working/ENFA.cpp.i
 
-.PHONY : Automata/Frederic/NFA.i
+.PHONY : Automata/Working/ENFA.i
 
 # target to preprocess a source file
-Automata/Frederic/NFA.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/Automata/Frederic/NFA.cpp.i
-.PHONY : Automata/Frederic/NFA.cpp.i
+Automata/Working/ENFA.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/Automata/Working/ENFA.cpp.i
+.PHONY : Automata/Working/ENFA.cpp.i
 
-Automata/Frederic/NFA.s: Automata/Frederic/NFA.cpp.s
+Automata/Working/ENFA.s: Automata/Working/ENFA.cpp.s
 
-.PHONY : Automata/Frederic/NFA.s
+.PHONY : Automata/Working/ENFA.s
 
 # target to generate assembly for a file
-Automata/Frederic/NFA.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/Automata/Frederic/NFA.cpp.s
-.PHONY : Automata/Frederic/NFA.cpp.s
+Automata/Working/ENFA.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/Automata/Working/ENFA.cpp.s
+.PHONY : Automata/Working/ENFA.cpp.s
 
-Automata/Frederic/RE.o: Automata/Frederic/RE.cpp.o
+Automata/Working/FA.o: Automata/Working/FA.cpp.o
 
-.PHONY : Automata/Frederic/RE.o
+.PHONY : Automata/Working/FA.o
 
 # target to build an object file
-Automata/Frederic/RE.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/Automata/Frederic/RE.cpp.o
-.PHONY : Automata/Frederic/RE.cpp.o
+Automata/Working/FA.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/Automata/Working/FA.cpp.o
+.PHONY : Automata/Working/FA.cpp.o
 
-Automata/Frederic/RE.i: Automata/Frederic/RE.cpp.i
+Automata/Working/FA.i: Automata/Working/FA.cpp.i
 
-.PHONY : Automata/Frederic/RE.i
+.PHONY : Automata/Working/FA.i
 
 # target to preprocess a source file
-Automata/Frederic/RE.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/Automata/Frederic/RE.cpp.i
-.PHONY : Automata/Frederic/RE.cpp.i
+Automata/Working/FA.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/Automata/Working/FA.cpp.i
+.PHONY : Automata/Working/FA.cpp.i
 
-Automata/Frederic/RE.s: Automata/Frederic/RE.cpp.s
+Automata/Working/FA.s: Automata/Working/FA.cpp.s
 
-.PHONY : Automata/Frederic/RE.s
+.PHONY : Automata/Working/FA.s
 
 # target to generate assembly for a file
-Automata/Frederic/RE.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/Automata/Frederic/RE.cpp.s
-.PHONY : Automata/Frederic/RE.cpp.s
+Automata/Working/FA.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/Automata/Working/FA.cpp.s
+.PHONY : Automata/Working/FA.cpp.s
+
+Automata/Working/NFA.o: Automata/Working/NFA.cpp.o
+
+.PHONY : Automata/Working/NFA.o
+
+# target to build an object file
+Automata/Working/NFA.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/Automata/Working/NFA.cpp.o
+.PHONY : Automata/Working/NFA.cpp.o
+
+Automata/Working/NFA.i: Automata/Working/NFA.cpp.i
+
+.PHONY : Automata/Working/NFA.i
+
+# target to preprocess a source file
+Automata/Working/NFA.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/Automata/Working/NFA.cpp.i
+.PHONY : Automata/Working/NFA.cpp.i
+
+Automata/Working/NFA.s: Automata/Working/NFA.cpp.s
+
+.PHONY : Automata/Working/NFA.s
+
+# target to generate assembly for a file
+Automata/Working/NFA.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/Automata/Working/NFA.cpp.s
+.PHONY : Automata/Working/NFA.cpp.s
+
+Automata/Working/RE.o: Automata/Working/RE.cpp.o
+
+.PHONY : Automata/Working/RE.o
+
+# target to build an object file
+Automata/Working/RE.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/Automata/Working/RE.cpp.o
+.PHONY : Automata/Working/RE.cpp.o
+
+Automata/Working/RE.i: Automata/Working/RE.cpp.i
+
+.PHONY : Automata/Working/RE.i
+
+# target to preprocess a source file
+Automata/Working/RE.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/Automata/Working/RE.cpp.i
+.PHONY : Automata/Working/RE.cpp.i
+
+Automata/Working/RE.s: Automata/Working/RE.cpp.s
+
+.PHONY : Automata/Working/RE.s
+
+# target to generate assembly for a file
+Automata/Working/RE.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/Automata/Working/RE.cpp.s
+.PHONY : Automata/Working/RE.cpp.s
+
+Correctness.o: Correctness.cpp.o
+
+.PHONY : Correctness.o
+
+# target to build an object file
+Correctness.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/Correctness.cpp.o
+.PHONY : Correctness.cpp.o
+
+Correctness.i: Correctness.cpp.i
+
+.PHONY : Correctness.i
+
+# target to preprocess a source file
+Correctness.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/Correctness.cpp.i
+.PHONY : Correctness.cpp.i
+
+Correctness.s: Correctness.cpp.s
+
+.PHONY : Correctness.s
+
+# target to generate assembly for a file
+Correctness.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/Correctness.cpp.s
+.PHONY : Correctness.cpp.s
+
+Virus.o: Virus.cpp.o
+
+.PHONY : Virus.o
+
+# target to build an object file
+Virus.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/Virus.cpp.o
+.PHONY : Virus.cpp.o
+
+Virus.i: Virus.cpp.i
+
+.PHONY : Virus.i
+
+# target to preprocess a source file
+Virus.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/Virus.cpp.i
+.PHONY : Virus.cpp.i
+
+Virus.s: Virus.cpp.s
+
+.PHONY : Virus.s
+
+# target to generate assembly for a file
+Virus.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/Virus.cpp.s
+.PHONY : Virus.cpp.s
+
+World.o: World.cpp.o
+
+.PHONY : World.o
+
+# target to build an object file
+World.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/World.cpp.o
+.PHONY : World.cpp.o
+
+World.i: World.cpp.i
+
+.PHONY : World.i
+
+# target to preprocess a source file
+World.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/World.cpp.i
+.PHONY : World.cpp.i
+
+World.s: World.cpp.s
+
+.PHONY : World.s
+
+# target to generate assembly for a file
+World.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/World.cpp.s
+.PHONY : World.cpp.s
 
 main.o: main.cpp.o
 
@@ -287,18 +395,30 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... VSS"
-	@echo "... Automata/Frederic/DFA.o"
-	@echo "... Automata/Frederic/DFA.i"
-	@echo "... Automata/Frederic/DFA.s"
-	@echo "... Automata/Frederic/ENFA.o"
-	@echo "... Automata/Frederic/ENFA.i"
-	@echo "... Automata/Frederic/ENFA.s"
-	@echo "... Automata/Frederic/NFA.o"
-	@echo "... Automata/Frederic/NFA.i"
-	@echo "... Automata/Frederic/NFA.s"
-	@echo "... Automata/Frederic/RE.o"
-	@echo "... Automata/Frederic/RE.i"
-	@echo "... Automata/Frederic/RE.s"
+	@echo "... Automata/Working/DFA.o"
+	@echo "... Automata/Working/DFA.i"
+	@echo "... Automata/Working/DFA.s"
+	@echo "... Automata/Working/ENFA.o"
+	@echo "... Automata/Working/ENFA.i"
+	@echo "... Automata/Working/ENFA.s"
+	@echo "... Automata/Working/FA.o"
+	@echo "... Automata/Working/FA.i"
+	@echo "... Automata/Working/FA.s"
+	@echo "... Automata/Working/NFA.o"
+	@echo "... Automata/Working/NFA.i"
+	@echo "... Automata/Working/NFA.s"
+	@echo "... Automata/Working/RE.o"
+	@echo "... Automata/Working/RE.i"
+	@echo "... Automata/Working/RE.s"
+	@echo "... Correctness.o"
+	@echo "... Correctness.i"
+	@echo "... Correctness.s"
+	@echo "... Virus.o"
+	@echo "... Virus.i"
+	@echo "... Virus.s"
+	@echo "... World.o"
+	@echo "... World.i"
+	@echo "... World.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

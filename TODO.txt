@@ -1,7 +1,7 @@
 VIRUS:
-    - besmettingsgraad: laat de interne klok tijd 'trager' of 'sneller' gaan (value groter dan 0)
+    - besmettingsgraad: kans dat je besmet geraakt bij aanraking (tussen 0 en 1)
     - sterftegraad: kans dat een state een dode state wordt (tussen 0 en 1)
-    - incubatietijd: aantal interne klokslagen dat het duurt voor je pottentiel ziek wordt (groter dan 0)
+    - incubatietijd: aantal interne klokslagen dat het duurt voor je pottentiel ziek wordt (gehele getallen groter of gelijk aan 0)
     - kans op ziekte: rand multiplicatie checken of sterftegrens, asymptomatische grens en hospitalisatie grens (tussen 0 en 1)
     - besmettelijk tijdens incubatie: 0 of 1
     - besmettelijk wanneer asymptomatisch: 0 of 1

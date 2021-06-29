@@ -80,31 +80,52 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Frederic/DFA.cpp">
+		<Unit filename="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/DFA.cpp">
 			<Option target="VSS"/>
 		</Unit>
-		<Unit filename="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Frederic/DFA.h">
+		<Unit filename="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/DFA.h">
 			<Option target="VSS"/>
 		</Unit>
-		<Unit filename="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Frederic/ENFA.cpp">
+		<Unit filename="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/ENFA.cpp">
 			<Option target="VSS"/>
 		</Unit>
-		<Unit filename="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Frederic/ENFA.h">
+		<Unit filename="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/ENFA.h">
 			<Option target="VSS"/>
 		</Unit>
-		<Unit filename="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Frederic/NFA.cpp">
+		<Unit filename="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/FA.cpp">
 			<Option target="VSS"/>
 		</Unit>
-		<Unit filename="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Frederic/NFA.h">
+		<Unit filename="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/FA.h">
 			<Option target="VSS"/>
 		</Unit>
-		<Unit filename="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Frederic/RE.cpp">
+		<Unit filename="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/NFA.cpp">
 			<Option target="VSS"/>
 		</Unit>
-		<Unit filename="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Frederic/RE.h">
+		<Unit filename="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/NFA.h">
 			<Option target="VSS"/>
 		</Unit>
-		<Unit filename="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Frederic/json.hpp">
+		<Unit filename="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/RE.cpp">
+			<Option target="VSS"/>
+		</Unit>
+		<Unit filename="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/RE.h">
+			<Option target="VSS"/>
+		</Unit>
+		<Unit filename="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Correctness.cpp">
+			<Option target="VSS"/>
+		</Unit>
+		<Unit filename="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Correctness.h">
+			<Option target="VSS"/>
+		</Unit>
+		<Unit filename="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Virus.cpp">
+			<Option target="VSS"/>
+		</Unit>
+		<Unit filename="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Virus.h">
+			<Option target="VSS"/>
+		</Unit>
+		<Unit filename="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/World.cpp">
+			<Option target="VSS"/>
+		</Unit>
+		<Unit filename="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/World.h">
 			<Option target="VSS"/>
 		</Unit>
 		<Unit filename="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/json.hpp">

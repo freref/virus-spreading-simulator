@@ -4,10 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Frederic/DFA.cpp" "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/cmake-build-debug/CMakeFiles/VSS.dir/Automata/Frederic/DFA.cpp.o"
-  "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Frederic/ENFA.cpp" "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/cmake-build-debug/CMakeFiles/VSS.dir/Automata/Frederic/ENFA.cpp.o"
-  "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Frederic/NFA.cpp" "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/cmake-build-debug/CMakeFiles/VSS.dir/Automata/Frederic/NFA.cpp.o"
-  "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Frederic/RE.cpp" "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/cmake-build-debug/CMakeFiles/VSS.dir/Automata/Frederic/RE.cpp.o"
+  "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/DFA.cpp" "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/cmake-build-debug/CMakeFiles/VSS.dir/Automata/Working/DFA.cpp.o"
+  "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/ENFA.cpp" "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/cmake-build-debug/CMakeFiles/VSS.dir/Automata/Working/ENFA.cpp.o"
+  "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/FA.cpp" "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/cmake-build-debug/CMakeFiles/VSS.dir/Automata/Working/FA.cpp.o"
+  "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/NFA.cpp" "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/cmake-build-debug/CMakeFiles/VSS.dir/Automata/Working/NFA.cpp.o"
+  "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/RE.cpp" "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/cmake-build-debug/CMakeFiles/VSS.dir/Automata/Working/RE.cpp.o"
+  "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Correctness.cpp" "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/cmake-build-debug/CMakeFiles/VSS.dir/Correctness.cpp.o"
+  "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Virus.cpp" "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/cmake-build-debug/CMakeFiles/VSS.dir/Virus.cpp.o"
+  "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/World.cpp" "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/cmake-build-debug/CMakeFiles/VSS.dir/World.cpp.o"
   "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/main.cpp" "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/cmake-build-debug/CMakeFiles/VSS.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")

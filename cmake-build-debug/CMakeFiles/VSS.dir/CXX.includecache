@@ -6,6 +6,52 @@
 
 #IncludeRegexTransform: 
 
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/ENFA.h
+vector
+-
+FA.h
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/FA.h
+
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/FA.h
+string
+-
+vector
+-
+map
+-
+iostream
+-
+../../json.hpp
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/json.hpp
+
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/RE.h
+set
+-
+string
+-
+ENFA.h
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/ENFA.h
+
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Correctness.h
+json.hpp
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/json.hpp
+Automata/Working/RE.h
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/RE.h
+
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/World.cpp
+World.h
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/World.h
+
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/World.h
+json.hpp
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/json.hpp
+Correctness.h
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Correctness.h
+fstream
+-
+ostream
+-
+
 /Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/json.hpp
 algorithm
 -
@@ -339,10 +385,4 @@ limits
 -
 type_traits
 -
-
-/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/main.cpp
-iostream
--
-json.hpp
-/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/json.hpp
 

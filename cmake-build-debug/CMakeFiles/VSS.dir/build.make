@@ -90,77 +90,137 @@ CMakeFiles/VSS.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VSS.dir/main.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/main.cpp" -o CMakeFiles/VSS.dir/main.cpp.s
 
-CMakeFiles/VSS.dir/Automata/Frederic/DFA.cpp.o: CMakeFiles/VSS.dir/flags.make
-CMakeFiles/VSS.dir/Automata/Frederic/DFA.cpp.o: ../Automata/Frederic/DFA.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/VSS.dir/Automata/Frederic/DFA.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VSS.dir/Automata/Frederic/DFA.cpp.o -c "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Frederic/DFA.cpp"
+CMakeFiles/VSS.dir/Automata/Working/DFA.cpp.o: CMakeFiles/VSS.dir/flags.make
+CMakeFiles/VSS.dir/Automata/Working/DFA.cpp.o: ../Automata/Working/DFA.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/VSS.dir/Automata/Working/DFA.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VSS.dir/Automata/Working/DFA.cpp.o -c "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/DFA.cpp"
 
-CMakeFiles/VSS.dir/Automata/Frederic/DFA.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VSS.dir/Automata/Frederic/DFA.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Frederic/DFA.cpp" > CMakeFiles/VSS.dir/Automata/Frederic/DFA.cpp.i
+CMakeFiles/VSS.dir/Automata/Working/DFA.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VSS.dir/Automata/Working/DFA.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/DFA.cpp" > CMakeFiles/VSS.dir/Automata/Working/DFA.cpp.i
 
-CMakeFiles/VSS.dir/Automata/Frederic/DFA.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VSS.dir/Automata/Frederic/DFA.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Frederic/DFA.cpp" -o CMakeFiles/VSS.dir/Automata/Frederic/DFA.cpp.s
+CMakeFiles/VSS.dir/Automata/Working/DFA.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VSS.dir/Automata/Working/DFA.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/DFA.cpp" -o CMakeFiles/VSS.dir/Automata/Working/DFA.cpp.s
 
-CMakeFiles/VSS.dir/Automata/Frederic/ENFA.cpp.o: CMakeFiles/VSS.dir/flags.make
-CMakeFiles/VSS.dir/Automata/Frederic/ENFA.cpp.o: ../Automata/Frederic/ENFA.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/VSS.dir/Automata/Frederic/ENFA.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VSS.dir/Automata/Frederic/ENFA.cpp.o -c "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Frederic/ENFA.cpp"
+CMakeFiles/VSS.dir/Automata/Working/ENFA.cpp.o: CMakeFiles/VSS.dir/flags.make
+CMakeFiles/VSS.dir/Automata/Working/ENFA.cpp.o: ../Automata/Working/ENFA.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/VSS.dir/Automata/Working/ENFA.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VSS.dir/Automata/Working/ENFA.cpp.o -c "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/ENFA.cpp"
 
-CMakeFiles/VSS.dir/Automata/Frederic/ENFA.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VSS.dir/Automata/Frederic/ENFA.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Frederic/ENFA.cpp" > CMakeFiles/VSS.dir/Automata/Frederic/ENFA.cpp.i
+CMakeFiles/VSS.dir/Automata/Working/ENFA.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VSS.dir/Automata/Working/ENFA.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/ENFA.cpp" > CMakeFiles/VSS.dir/Automata/Working/ENFA.cpp.i
 
-CMakeFiles/VSS.dir/Automata/Frederic/ENFA.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VSS.dir/Automata/Frederic/ENFA.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Frederic/ENFA.cpp" -o CMakeFiles/VSS.dir/Automata/Frederic/ENFA.cpp.s
+CMakeFiles/VSS.dir/Automata/Working/ENFA.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VSS.dir/Automata/Working/ENFA.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/ENFA.cpp" -o CMakeFiles/VSS.dir/Automata/Working/ENFA.cpp.s
 
-CMakeFiles/VSS.dir/Automata/Frederic/NFA.cpp.o: CMakeFiles/VSS.dir/flags.make
-CMakeFiles/VSS.dir/Automata/Frederic/NFA.cpp.o: ../Automata/Frederic/NFA.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/VSS.dir/Automata/Frederic/NFA.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VSS.dir/Automata/Frederic/NFA.cpp.o -c "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Frederic/NFA.cpp"
+CMakeFiles/VSS.dir/Automata/Working/NFA.cpp.o: CMakeFiles/VSS.dir/flags.make
+CMakeFiles/VSS.dir/Automata/Working/NFA.cpp.o: ../Automata/Working/NFA.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/VSS.dir/Automata/Working/NFA.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VSS.dir/Automata/Working/NFA.cpp.o -c "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/NFA.cpp"
 
-CMakeFiles/VSS.dir/Automata/Frederic/NFA.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VSS.dir/Automata/Frederic/NFA.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Frederic/NFA.cpp" > CMakeFiles/VSS.dir/Automata/Frederic/NFA.cpp.i
+CMakeFiles/VSS.dir/Automata/Working/NFA.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VSS.dir/Automata/Working/NFA.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/NFA.cpp" > CMakeFiles/VSS.dir/Automata/Working/NFA.cpp.i
 
-CMakeFiles/VSS.dir/Automata/Frederic/NFA.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VSS.dir/Automata/Frederic/NFA.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Frederic/NFA.cpp" -o CMakeFiles/VSS.dir/Automata/Frederic/NFA.cpp.s
+CMakeFiles/VSS.dir/Automata/Working/NFA.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VSS.dir/Automata/Working/NFA.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/NFA.cpp" -o CMakeFiles/VSS.dir/Automata/Working/NFA.cpp.s
 
-CMakeFiles/VSS.dir/Automata/Frederic/RE.cpp.o: CMakeFiles/VSS.dir/flags.make
-CMakeFiles/VSS.dir/Automata/Frederic/RE.cpp.o: ../Automata/Frederic/RE.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/VSS.dir/Automata/Frederic/RE.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VSS.dir/Automata/Frederic/RE.cpp.o -c "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Frederic/RE.cpp"
+CMakeFiles/VSS.dir/Automata/Working/RE.cpp.o: CMakeFiles/VSS.dir/flags.make
+CMakeFiles/VSS.dir/Automata/Working/RE.cpp.o: ../Automata/Working/RE.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/VSS.dir/Automata/Working/RE.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VSS.dir/Automata/Working/RE.cpp.o -c "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/RE.cpp"
 
-CMakeFiles/VSS.dir/Automata/Frederic/RE.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VSS.dir/Automata/Frederic/RE.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Frederic/RE.cpp" > CMakeFiles/VSS.dir/Automata/Frederic/RE.cpp.i
+CMakeFiles/VSS.dir/Automata/Working/RE.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VSS.dir/Automata/Working/RE.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/RE.cpp" > CMakeFiles/VSS.dir/Automata/Working/RE.cpp.i
 
-CMakeFiles/VSS.dir/Automata/Frederic/RE.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VSS.dir/Automata/Frederic/RE.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Frederic/RE.cpp" -o CMakeFiles/VSS.dir/Automata/Frederic/RE.cpp.s
+CMakeFiles/VSS.dir/Automata/Working/RE.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VSS.dir/Automata/Working/RE.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/RE.cpp" -o CMakeFiles/VSS.dir/Automata/Working/RE.cpp.s
+
+CMakeFiles/VSS.dir/Automata/Working/FA.cpp.o: CMakeFiles/VSS.dir/flags.make
+CMakeFiles/VSS.dir/Automata/Working/FA.cpp.o: ../Automata/Working/FA.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/VSS.dir/Automata/Working/FA.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VSS.dir/Automata/Working/FA.cpp.o -c "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/FA.cpp"
+
+CMakeFiles/VSS.dir/Automata/Working/FA.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VSS.dir/Automata/Working/FA.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/FA.cpp" > CMakeFiles/VSS.dir/Automata/Working/FA.cpp.i
+
+CMakeFiles/VSS.dir/Automata/Working/FA.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VSS.dir/Automata/Working/FA.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/FA.cpp" -o CMakeFiles/VSS.dir/Automata/Working/FA.cpp.s
+
+CMakeFiles/VSS.dir/Virus.cpp.o: CMakeFiles/VSS.dir/flags.make
+CMakeFiles/VSS.dir/Virus.cpp.o: ../Virus.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/VSS.dir/Virus.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VSS.dir/Virus.cpp.o -c "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Virus.cpp"
+
+CMakeFiles/VSS.dir/Virus.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VSS.dir/Virus.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Virus.cpp" > CMakeFiles/VSS.dir/Virus.cpp.i
+
+CMakeFiles/VSS.dir/Virus.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VSS.dir/Virus.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Virus.cpp" -o CMakeFiles/VSS.dir/Virus.cpp.s
+
+CMakeFiles/VSS.dir/Correctness.cpp.o: CMakeFiles/VSS.dir/flags.make
+CMakeFiles/VSS.dir/Correctness.cpp.o: ../Correctness.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/VSS.dir/Correctness.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VSS.dir/Correctness.cpp.o -c "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Correctness.cpp"
+
+CMakeFiles/VSS.dir/Correctness.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VSS.dir/Correctness.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Correctness.cpp" > CMakeFiles/VSS.dir/Correctness.cpp.i
+
+CMakeFiles/VSS.dir/Correctness.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VSS.dir/Correctness.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Correctness.cpp" -o CMakeFiles/VSS.dir/Correctness.cpp.s
+
+CMakeFiles/VSS.dir/World.cpp.o: CMakeFiles/VSS.dir/flags.make
+CMakeFiles/VSS.dir/World.cpp.o: ../World.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/VSS.dir/World.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VSS.dir/World.cpp.o -c "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/World.cpp"
+
+CMakeFiles/VSS.dir/World.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VSS.dir/World.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/World.cpp" > CMakeFiles/VSS.dir/World.cpp.i
+
+CMakeFiles/VSS.dir/World.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VSS.dir/World.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/World.cpp" -o CMakeFiles/VSS.dir/World.cpp.s
 
 # Object files for target VSS
 VSS_OBJECTS = \
 "CMakeFiles/VSS.dir/main.cpp.o" \
-"CMakeFiles/VSS.dir/Automata/Frederic/DFA.cpp.o" \
-"CMakeFiles/VSS.dir/Automata/Frederic/ENFA.cpp.o" \
-"CMakeFiles/VSS.dir/Automata/Frederic/NFA.cpp.o" \
-"CMakeFiles/VSS.dir/Automata/Frederic/RE.cpp.o"
+"CMakeFiles/VSS.dir/Automata/Working/DFA.cpp.o" \
+"CMakeFiles/VSS.dir/Automata/Working/ENFA.cpp.o" \
+"CMakeFiles/VSS.dir/Automata/Working/NFA.cpp.o" \
+"CMakeFiles/VSS.dir/Automata/Working/RE.cpp.o" \
+"CMakeFiles/VSS.dir/Automata/Working/FA.cpp.o" \
+"CMakeFiles/VSS.dir/Virus.cpp.o" \
+"CMakeFiles/VSS.dir/Correctness.cpp.o" \
+"CMakeFiles/VSS.dir/World.cpp.o"
 
 # External object files for target VSS
 VSS_EXTERNAL_OBJECTS =
 
 VSS: CMakeFiles/VSS.dir/main.cpp.o
-VSS: CMakeFiles/VSS.dir/Automata/Frederic/DFA.cpp.o
-VSS: CMakeFiles/VSS.dir/Automata/Frederic/ENFA.cpp.o
-VSS: CMakeFiles/VSS.dir/Automata/Frederic/NFA.cpp.o
-VSS: CMakeFiles/VSS.dir/Automata/Frederic/RE.cpp.o
+VSS: CMakeFiles/VSS.dir/Automata/Working/DFA.cpp.o
+VSS: CMakeFiles/VSS.dir/Automata/Working/ENFA.cpp.o
+VSS: CMakeFiles/VSS.dir/Automata/Working/NFA.cpp.o
+VSS: CMakeFiles/VSS.dir/Automata/Working/RE.cpp.o
+VSS: CMakeFiles/VSS.dir/Automata/Working/FA.cpp.o
+VSS: CMakeFiles/VSS.dir/Virus.cpp.o
+VSS: CMakeFiles/VSS.dir/Correctness.cpp.o
+VSS: CMakeFiles/VSS.dir/World.cpp.o
 VSS: CMakeFiles/VSS.dir/build.make
 VSS: CMakeFiles/VSS.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable VSS"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable VSS"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/VSS.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
