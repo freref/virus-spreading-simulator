@@ -14,9 +14,11 @@ using json = nlohmann::json;
 
 class World {
 public:
+    json info;
+
     World(std::string path);
 
-    void makeWorld(json &info);
+    void correctness();
 };
 
 

@@ -8,6 +8,7 @@
 #include "ENFA.h"
 #include <string>
 #include <set>
+#include <stdio.h>
 
 using namespace std;
 using json = nlohmann::json;

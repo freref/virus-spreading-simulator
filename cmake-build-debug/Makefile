@@ -305,6 +305,33 @@ Correctness.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/Correctness.cpp.s
 .PHONY : Correctness.cpp.s
 
+Statistiek.o: Statistiek.cpp.o
+
+.PHONY : Statistiek.o
+
+# target to build an object file
+Statistiek.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/Statistiek.cpp.o
+.PHONY : Statistiek.cpp.o
+
+Statistiek.i: Statistiek.cpp.i
+
+.PHONY : Statistiek.i
+
+# target to preprocess a source file
+Statistiek.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/Statistiek.cpp.i
+.PHONY : Statistiek.cpp.i
+
+Statistiek.s: Statistiek.cpp.s
+
+.PHONY : Statistiek.s
+
+# target to generate assembly for a file
+Statistiek.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VSS.dir/build.make CMakeFiles/VSS.dir/Statistiek.cpp.s
+.PHONY : Statistiek.cpp.s
+
 Virus.o: Virus.cpp.o
 
 .PHONY : Virus.o
@@ -413,6 +440,9 @@ help:
 	@echo "... Correctness.o"
 	@echo "... Correctness.i"
 	@echo "... Correctness.s"
+	@echo "... Statistiek.o"
+	@echo "... Statistiek.i"
+	@echo "... Statistiek.s"
 	@echo "... Virus.o"
 	@echo "... Virus.i"
 	@echo "... Virus.s"

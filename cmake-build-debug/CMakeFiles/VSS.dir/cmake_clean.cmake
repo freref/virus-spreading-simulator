@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/VSS.dir/Automata/Working/NFA.cpp.o"
   "CMakeFiles/VSS.dir/Automata/Working/RE.cpp.o"
   "CMakeFiles/VSS.dir/Correctness.cpp.o"
+  "CMakeFiles/VSS.dir/Statistiek.cpp.o"
   "CMakeFiles/VSS.dir/Virus.cpp.o"
   "CMakeFiles/VSS.dir/World.cpp.o"
   "CMakeFiles/VSS.dir/main.cpp.o"

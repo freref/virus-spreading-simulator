@@ -1,0 +1,25 @@
+{
+    "alphabet": [
+        "4"
+    ],
+    "states": [
+        {
+            "accepting": false,
+            "name": "a",
+            "starting": true
+        },
+        {
+            "accepting": true,
+            "name": "b",
+            "starting": false
+        }
+    ],
+    "transitions": [
+        {
+            "from": "a",
+            "input": "4",
+            "to": "b"
+        }
+    ],
+    "type": "NFA"
+}

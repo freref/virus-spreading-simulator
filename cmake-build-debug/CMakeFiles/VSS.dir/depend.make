@@ -40,9 +40,13 @@ CMakeFiles/VSS.dir/Correctness.cpp.o: ../Correctness.cpp
 CMakeFiles/VSS.dir/Correctness.cpp.o: ../Correctness.h
 CMakeFiles/VSS.dir/Correctness.cpp.o: ../json.hpp
 
+CMakeFiles/VSS.dir/Statistiek.cpp.o: ../Statistiek.cpp
+CMakeFiles/VSS.dir/Statistiek.cpp.o: ../Statistiek.h
+
 CMakeFiles/VSS.dir/Virus.cpp.o: ../Automata/Working/DFA.h
 CMakeFiles/VSS.dir/Virus.cpp.o: ../Automata/Working/ENFA.h
 CMakeFiles/VSS.dir/Virus.cpp.o: ../Automata/Working/FA.h
+CMakeFiles/VSS.dir/Virus.cpp.o: ../Automata/Working/NFA.h
 CMakeFiles/VSS.dir/Virus.cpp.o: ../Automata/Working/RE.h
 CMakeFiles/VSS.dir/Virus.cpp.o: ../Correctness.h
 CMakeFiles/VSS.dir/Virus.cpp.o: ../Virus.cpp
@@ -60,6 +64,7 @@ CMakeFiles/VSS.dir/World.cpp.o: ../json.hpp
 CMakeFiles/VSS.dir/main.cpp.o: ../Automata/Working/DFA.h
 CMakeFiles/VSS.dir/main.cpp.o: ../Automata/Working/ENFA.h
 CMakeFiles/VSS.dir/main.cpp.o: ../Automata/Working/FA.h
+CMakeFiles/VSS.dir/main.cpp.o: ../Automata/Working/NFA.h
 CMakeFiles/VSS.dir/main.cpp.o: ../Automata/Working/RE.h
 CMakeFiles/VSS.dir/main.cpp.o: ../Correctness.h
 CMakeFiles/VSS.dir/main.cpp.o: ../Virus.h

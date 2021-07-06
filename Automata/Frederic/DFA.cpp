@@ -7,6 +7,10 @@ using namespace std;
 
 using json = nlohmann::json;
 
+DFA::DFA(){
+    path = "";
+}
+
 /**
  * constructor
  * @param p

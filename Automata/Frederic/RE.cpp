@@ -349,10 +349,10 @@ ENFA RE::toENFA() {
     renfa["alphabet"].erase(renfa["alphabet"].begin());
     renfa["transitions"].erase(renfa["transitions"].begin());
     renfa["transitions"].erase(renfa["transitions"].begin());
-    ofstream file("enfa.json");
-    file << renfa;
+    ofstream file("Regex/"+regex+".json");
+    file << std::setw(4) << renfa << std::endl;
     file.close();
-    ENFA enfa("enfa.json");
+    ENFA enfa("Regex/"+regex+".json");
     return enfa;
 }
 

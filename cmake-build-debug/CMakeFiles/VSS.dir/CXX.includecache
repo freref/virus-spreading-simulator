@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/DFA.h
+string
+-
+set
+-
+FA.h
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/FA.h
+RE.h
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/RE.h
+
 /Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/ENFA.h
 vector
 -
@@ -24,6 +34,12 @@ iostream
 ../../json.hpp
 /Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/json.hpp
 
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/NFA.h
+FA.h
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/FA.h
+DFA.h
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/DFA.h
+
 /Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/RE.h
 set
 -
@@ -38,19 +54,23 @@ json.hpp
 Automata/Working/RE.h
 /Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/RE.h
 
-/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/World.cpp
-World.h
-/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/World.h
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Virus.cpp
+Virus.h
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Virus.h
 
-/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/World.h
-json.hpp
-/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/json.hpp
-Correctness.h
-/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Correctness.h
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Virus.h
 fstream
 -
 ostream
 -
+Automata/Working/RE.h
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/RE.h
+json.hpp
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/json.hpp
+Automata/Working/NFA.h
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/NFA.h
+Correctness.h
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Correctness.h
 
 /Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/json.hpp
 algorithm

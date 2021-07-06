@@ -1,0 +1,36 @@
+{
+    "alphabet": [
+        "0.100000",
+        "0.900000"
+    ],
+    "states": [
+        {
+            "accepting": false,
+            "name": "a",
+            "starting": true
+        },
+        {
+            "accepting": true,
+            "name": "b",
+            "starting": false
+        },
+        {
+            "accepting": false,
+            "name": "c",
+            "starting": false
+        }
+    ],
+    "transitions": [
+        {
+            "from": "a",
+            "input": "0.100000",
+            "to": "b"
+        },
+        {
+            "from": "a",
+            "input": "0.900000",
+            "to": "c"
+        }
+    ],
+    "type": "NFA"
+}

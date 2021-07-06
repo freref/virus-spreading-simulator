@@ -22,6 +22,7 @@ public:
     json enfa;
     string eps;
     set<vector<string>> allStates;
+    vector<int> triedNodes;
 
     explicit ENFA(string p);
 
@@ -37,8 +38,8 @@ public:
     int transitionCount(string elem);
     int printDegree(int degree);
     bool accepts(string input);
-    void nextNodes(vector<int>* node, string input);
-    void tryEps(vector<int>* nodes);
+    void nextNodes(vector<int> &node, string input);
+    void tryEps(vector<int> &nodes);
 };
 
 

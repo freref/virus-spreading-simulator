@@ -40,10 +40,14 @@ CMakeFiles/VSS.dir/Correctness.cpp.o
  /Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Correctness.cpp
  /Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Correctness.h
  /Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/json.hpp
+CMakeFiles/VSS.dir/Statistiek.cpp.o
+ /Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Statistiek.cpp
+ /Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Statistiek.h
 CMakeFiles/VSS.dir/Virus.cpp.o
  /Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/DFA.h
  /Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/ENFA.h
  /Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/FA.h
+ /Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/NFA.h
  /Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/RE.h
  /Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Correctness.h
  /Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Virus.cpp
@@ -61,6 +65,7 @@ CMakeFiles/VSS.dir/main.cpp.o
  /Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/DFA.h
  /Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/ENFA.h
  /Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/FA.h
+ /Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/NFA.h
  /Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/RE.h
  /Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Correctness.h
  /Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Virus.h

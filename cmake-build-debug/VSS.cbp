@@ -116,6 +116,12 @@
 		<Unit filename="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Correctness.h">
 			<Option target="VSS"/>
 		</Unit>
+		<Unit filename="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Statistiek.cpp">
+			<Option target="VSS"/>
+		</Unit>
+		<Unit filename="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Statistiek.h">
+			<Option target="VSS"/>
+		</Unit>
 		<Unit filename="/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Virus.cpp">
 			<Option target="VSS"/>
 		</Unit>

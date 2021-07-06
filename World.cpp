@@ -5,13 +5,11 @@
 #include "World.h"
 
 World::World(std::string path){
-    json info;
     std::ifstream input(path);
     input >> info;
-    makeWorld(info);
 }
 
-void World::makeWorld(json &info) {
+void World::correctness() {
     for (json::iterator it = info.begin(); it != info.end(); ++it){
         Correctness::correctWorld(it);
     }

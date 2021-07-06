@@ -10,6 +10,11 @@ int main() {
     std::string world = "../Input/World/world1.json";
 
     Virus v(virus);
+    v.correctness();
+    v.makeVirus();
+
     World w(world);
+    w.correctness();
+
     return 0;
 }

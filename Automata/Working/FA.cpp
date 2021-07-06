@@ -39,9 +39,7 @@ FA::FA(const string &fileName) {
     ifstream in(fileName);
     json j;
     in >> j;
-
     type = j["type"]; // Get type
-
     // Create alphabet
     for (string c : j["alphabet"]) {
         alphabet.push_back(c[0]);
