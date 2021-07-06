@@ -12,7 +12,11 @@ int main() {
     std::string world = "../Input/World/world1.json";
 
     Virus v(virus);
+    v.correctness();
+    v.makeVirus();
+
     World w(world);
+
     Statistiek s(w.getPopulatie());
 
     std::cout << "Er zijn verschillende commando's beschikbaar, 'step n' laat de simulatie n dagen vooruit gaan, 'stat n' "

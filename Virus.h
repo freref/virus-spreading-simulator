@@ -9,19 +9,27 @@
 #include <ostream>
 #include "json.hpp"
 #include "Automata/Working/DFA.h"
+#include "Automata/Working/NFA.h"
 #include "Correctness.h"
 
 using json = nlohmann::json;
 
 class Virus {
 public:
-    //DFA virus;
+    json info;
     std::map<std::string, DFA> properties;
 
     Virus(std::string path);
     void makeProperties(json &info);
     DFA makeProperty(json::iterator::value_type chance);
     DFA makeDFA(int a, int b);
+    void correctness();
+    void makeVirus();
+    void makeProperties();
+    void makeProperty(json::iterator it);
+    void rangeNFA(json::iterator &it, std::string &name);
+    void integerNFA(json::iterator &it, std::string &name);
+    void percentageNFA(json::iterator &it, std::string &name);
 };
 
 
