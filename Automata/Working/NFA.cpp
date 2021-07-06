@@ -132,6 +132,7 @@ DFA NFA::toDFA() {
 
     // Set up parameters to create states
     map<string, State*> stateMap;
+
     vector<State*> states{startState};
     // Combine the states of the NFA starting from the start state
     string sState = createStates(stateMap, states, dead);

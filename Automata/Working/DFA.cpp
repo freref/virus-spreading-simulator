@@ -168,7 +168,7 @@ string DFA::createProductStates(map<string, State *> &stateMap, State* st1, Stat
         // Add to map
         stateMap.insert({name, nState});
         // Loop over the alphabet
-        for (char c : alphabet) {
+        for (double c : alphabet) {
             // Get transitions from both states
             State* trans1 = st1->transitions[c][0];
             State* trans2 = st2->transitions[c][0];
