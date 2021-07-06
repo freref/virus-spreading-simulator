@@ -41,6 +41,7 @@ int main() {
         std::cout << "> ";
         std::getline(std::cin, input);
     }
+    //std::cout << "Nog een fijne dag!\n";
 
     return 0;
 }

@@ -7,6 +7,10 @@
 
 Statistiek::Statistiek(int pop) {
     populatie = pop;
+    totZelfGenezen = 0;
+    totVerlaters = 0;
+    totOpnames = 0;
+    totDoden = 0;
 }
 
 
@@ -14,7 +18,7 @@ void Statistiek::printOverzicht() {
     std::cout << "Van de volledige populatie van " << populatie << " mensen zijn er momenteel:\n";
     std::cout << totOpnames + totZelfGenezen << "\tdie ziek zijn geworden waarvan\n"; // dit gaat er vanuit dat iedereen die sterft opgenomen wordt
     std::cout << totDoden << "\thelaas overleden zijn.\n";
-    std::cout << totVerlaters + totZelfGenezen << "\tmensen zijn ziek geworden en zijn succesvol genezen waarvan\n";
+    std::cout << totVerlaters + totZelfGenezen << "\tmensen zijn ziek geworden en succesvol zijn genezen waarvan\n";
     std::cout << totVerlaters << "\tmensen genezen zijn in het ziekenhuis en\n";
     std::cout << totZelfGenezen << "\tmensen thuis zijn uitgeziekt\n";
 }
