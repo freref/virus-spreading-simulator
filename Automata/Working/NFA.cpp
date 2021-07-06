@@ -89,7 +89,7 @@ string NFA::createStates(map<string, State*> &stateMap, vector<State*> &states, 
         nState->accepting = accepting;
         stateMap.insert( {name, nState} );
         // Go over alphabet
-        for (char c : alphabet) {
+        for (double c : alphabet) {
             // Vector to add all destination states on transition for alphabet character
             vector<State *> transStates;
             // Go over states in states vector

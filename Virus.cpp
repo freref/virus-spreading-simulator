@@ -18,7 +18,7 @@ void Virus::correctness() {
 void Virus::makeVirus() {
     makeProperties();
 
-    DFA a = NFA("Virus/incubatietijdN.json").toDFA();
+    DFA a = NFA("Virus/mutatie%.json").toDFA();
     DFA b = NFA("Virus/mutatie%.json").toDFA();
     DFA ab(a, b, true);
 
