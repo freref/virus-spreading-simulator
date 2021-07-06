@@ -20,7 +20,7 @@ int main() {
                  "hele periode, 'exit' stopt het programma.\n";
     std::string input;
     std::cout << "> ";
-    std::cin >> input;
+    std::getline(std::cin, input);
 
     while (input != "exit") {
         if (input.substr(0,4) == "step") {
@@ -37,6 +37,9 @@ int main() {
                 s.printTijdsOverzicht(dagen);
             }
         }
+
+        std::cout << "> ";
+        std::getline(std::cin, input);
     }
 
     return 0;

@@ -5,7 +5,7 @@
 #include "Statistiek.h"
 
 
-Statistiek::Statistiek(int& pop) {
+Statistiek::Statistiek(int pop) {
     populatie = pop;
 }
 
