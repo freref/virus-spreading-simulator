@@ -12,7 +12,7 @@ WORLD:
     - populatie: het aantal mensen in de world (getal groter dan 0)
     - bevolkingsdichtheid: gemiddelde tijd tussen mensen
     - gezondheidsgraad: verlaagt kans op sterven en hospitalisatie (hoe hoger hoe ongezonder)
+    - zgrens: ziekte kleiner dan (besmet)
     - agrens: asympotmatisch kleiner dan
-    - zgrens: ziekte kleiner dan
     - hgrens: hospitalisatie kleiner dan
-    - sgrens: sterfte kleiner dan
+    - sgrens: sterfte kleiner dan (TODO: overbodig)

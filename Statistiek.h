@@ -23,7 +23,11 @@ public:
 
     Statistiek(int populatie);
     void printOverzicht();
-    void printTijdsOverzicht(unsigned int dagen); // print overzicht van de laatse n dagen
+    void printTijdsOverzicht(unsigned int& dagen); // print overzicht van de laatse n dagen
+    void addDoden(int& dag, int& doden);
+    void addOpnames(int& dag, int& opnames);
+    void addVerlaters(int& dag, int& verlaters);
+    void addZelfGenezen(int& dag, int& zelfGenezen);
 
 };
 
