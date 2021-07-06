@@ -6,6 +6,7 @@
 
 using json = nlohmann::json;
 
+
 int main() {
     std::string virus = "../Input/Virus/virus1.json";
     std::string world = "../Input/World/world1.json";
@@ -29,7 +30,7 @@ int main() {
                 //simualtie +1
             }
         } else if (input.substr(0, 4) == "stat") {
-            int dagen = std::stoi(input.substr(5));
+            unsigned int dagen = std::stoi(input.substr(5));
             if (dagen == 0) {
                 s.printOverzicht();
             } else {

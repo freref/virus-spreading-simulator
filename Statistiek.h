@@ -21,7 +21,7 @@ public:
 
     int populatie;
 
-    Statistiek(int& populatie);
+    Statistiek(int populatie);
     void printOverzicht();
     void printTijdsOverzicht(unsigned int& dagen); // print overzicht van de laatse n dagen
     void addDoden(int& dag, int& doden);

@@ -19,7 +19,7 @@ class World {
     double agrens;
     double zgrens;
     double hgrens;
-    double sgrens;
+    //double sgrens; //overbodig
 
 public:
     World(std::string path);
