@@ -13,10 +13,29 @@
 using json = nlohmann::json;
 
 class World {
+    int populatie;
+    int bevolkingsdichtheid;
+    double gezonheidsgraad;
+    double agrens;
+    double zgrens;
+    double hgrens;
+    double sgrens;
+
 public:
     World(std::string path);
 
     void makeWorld(json &info);
+
+    int getPopulatie();
+    void setPopulatie(int pop);
+    int getBevolkingsdichtheid();
+    void setBevolkingsdichtheid(int bev);
+    void setGezondheidsgraad(double gez);
+    double getGezondeidsgraad();
+    double getAgrens();
+    void setAgrens(double ag);
+
+
 };
 
 
