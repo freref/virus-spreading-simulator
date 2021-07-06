@@ -67,6 +67,7 @@ CMakeFiles/VSS.dir/main.cpp.o: ../Automata/Working/FA.h
 CMakeFiles/VSS.dir/main.cpp.o: ../Automata/Working/NFA.h
 CMakeFiles/VSS.dir/main.cpp.o: ../Automata/Working/RE.h
 CMakeFiles/VSS.dir/main.cpp.o: ../Correctness.h
+CMakeFiles/VSS.dir/main.cpp.o: ../Statistiek.h
 CMakeFiles/VSS.dir/main.cpp.o: ../Virus.h
 CMakeFiles/VSS.dir/main.cpp.o: ../World.h
 CMakeFiles/VSS.dir/main.cpp.o: ../json.hpp

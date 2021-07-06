@@ -54,9 +54,15 @@ json.hpp
 Automata/Working/RE.h
 /Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/RE.h
 
-/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Virus.cpp
-Virus.h
-/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Virus.h
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Statistiek.cpp
+Statistiek.h
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Statistiek.h
+
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Statistiek.h
+vector
+-
+iostream
+-
 
 /Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Virus.h
 fstream
@@ -71,6 +77,20 @@ Automata/Working/NFA.h
 /Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Automata/Working/NFA.h
 Correctness.h
 /Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Correctness.h
+
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/World.cpp
+World.h
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/World.h
+
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/World.h
+json.hpp
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/json.hpp
+Correctness.h
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Correctness.h
+fstream
+-
+ostream
+-
 
 /Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/json.hpp
 algorithm
@@ -405,4 +425,16 @@ limits
 -
 type_traits
 -
+
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/main.cpp
+iostream
+-
+json.hpp
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/json.hpp
+Virus.h
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Virus.h
+World.h
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/World.h
+Statistiek.h
+/Users/frederic/Documents/Informatica/Sem2/TA/TO groep/VSS/Statistiek.h
 
