@@ -11,6 +11,7 @@
 #include "Automata/Working/DFA.h"
 #include "Automata/Working/NFA.h"
 #include "Correctness.h"
+#include <iomanip>
 
 using json = nlohmann::json;
 

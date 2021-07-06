@@ -18,7 +18,9 @@ void Virus::correctness() {
 void Virus::makeVirus() {
     makeProperties();
 
-    //DFA c = NFA("Virus/incubatie?.json").toDFA();
+    DFA a = NFA("Virus/incubatie?.json").toDFA();
+    DFA b = NFA("Virus/mutatie%.json").toDFA();
+
     //DFA d = NFA("Virus/incubatietijdN.json").toDFA();
     //DFA e = NFA("Virus/mutatie%.json").toDFA();
     //DFA f = NFA("Virus/mutatieR.json").toDFA();
@@ -58,11 +60,8 @@ void Virus::makeProperty(json::iterator it) {
 }
 
 void Virus::rangeNFA(json::iterator &it, std::string &name){
-    double chance1 = it.value()[0].get<double>();
-    double chance2 = it.value()[1].get<double>();
-
-    string c1 = std::to_string(chance1);
-    string c2 = std::to_string(chance2);
+    double c1 = it.value()[0].get<double>();
+    double c2 = it.value()[1].get<double>();
 
     json n;
     n["type"] = "NFA";
@@ -78,27 +77,22 @@ void Virus::rangeNFA(json::iterator &it, std::string &name){
 }
 
 void Virus::integerNFA(json::iterator &it, std::string &name) {
-    int integer = it.value().get<int>();
-
-    string i = std::to_string(integer);
+    double integer = it.value().get<double>();
 
     json n;
     n["type"] = "NFA";
-    n["alphabet"] = {i};
+    n["alphabet"] = {integer};
     n["states"] = {{{"name", "a"}, {"starting", true}, {"accepting", false}},
                    {{"name", "b"}, {"starting", false}, {"accepting", true}}};
-    n["transitions"] = {{{"from", "a"}, {"to", "b"}, {"input", i}}};
+    n["transitions"] = {{{"from", "a"}, {"to", "b"}, {"input", integer}}};
 
     std::ofstream o(name);
     o << std::setw(4) << n << std::endl;
 }
 
 void Virus::percentageNFA(json::iterator &it, std::string &name) {
-    double chance1 = it.value().get<double>();
-    double chance2 = 1.0-chance1;
-
-    string c1 = std::to_string(chance1);
-    string c2 = std::to_string(chance2);
+    double c1 = it.value().get<double>();
+    double c2 = 1.0-c1;
 
     json n;
     n["type"] = "NFA";

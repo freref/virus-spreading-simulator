@@ -149,7 +149,7 @@ ENFA RE::toENFA() const {
     // Set epsilon character
     enfa.setEpsilon(epsilon);
     // Create and set alphabet
-    vector<char> alpha;
+    vector<double> alpha;
     for (char c : alphabet) {
         alpha.push_back(c);
     }

@@ -26,7 +26,7 @@ State & State::operator=(const State &copy) {
     return *this;
 }
 
-deadState::deadState(vector<char> &alphabet) {
+deadState::deadState(vector<double> &alphabet) {
     name = "";
     // Set transitions for whole alphabet to self
     for (auto c : alphabet) {
@@ -41,10 +41,9 @@ FA::FA(const string &fileName) {
     in >> j;
 
     type = j["type"]; // Get type
-
     // Create alphabet
-    for (string c : j["alphabet"]) {
-        alphabet.push_back(c[0]);
+    for (double c : j["alphabet"]) {
+        alphabet.push_back(c);
     }
     // Initialise states
     for (auto state : j["states"]) {
@@ -77,25 +76,25 @@ FA::FA(const string &fileName) {
             if (state->name == trans["to"]) ePtr = state;
         }
         // Get transition character
-        string symb = trans["input"];
+        double symb = trans["input"];
         bool inAlpha = false;
         // Check whether transition character in alphabet
-        for (char c : alphabet) {
-            if (symb[0] == c) { inAlpha = true; break; }
+        for (double c : alphabet) {
+            if (symb == c) { inAlpha = true; break; }
         }
         if (!inAlpha) { // Transition character not in alphabet
             cerr << "Transition on character '" << symb << "' not in alphabet" << endl;
             continue;
         }
-        if (sPtr->transitions.find(symb[0]) == sPtr->transitions.cend()) {
+        if (sPtr->transitions.find(symb) == sPtr->transitions.cend()) {
             // No transitions on character exist for begin state
             vector<State*> v; v.push_back(ePtr);
             // Add character and transition state to transition map begin state
-            sPtr->transitions.insert({symb[0], v});
+            sPtr->transitions.insert({symb, v});
         } else {
             // Transitions on character already exist for begin state
             // Add destination state to transition character in transitions of begin state
-            sPtr->transitions[symb[0]].push_back(ePtr);
+            sPtr->transitions[symb].push_back(ePtr);
         }
 //        cout << "Transition from " << sPtr->name << " to " << ePtr->name << " on " << symb << endl;
     }
