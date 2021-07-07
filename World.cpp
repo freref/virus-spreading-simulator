@@ -65,3 +65,7 @@ void World::setAgrens(double ag) {
     }
 }
 
+World::World() {
+
+}
+

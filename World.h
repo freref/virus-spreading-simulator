@@ -22,6 +22,7 @@ class World {
     //double sgrens; //overbodig
 
 public:
+    World();
     World(std::string path);
 
     void makeWorld(json &info);

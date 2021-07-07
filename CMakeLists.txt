@@ -18,4 +18,4 @@ add_executable(VSS main.cpp
         Automata/Working/NFA.cpp Automata/Working/NFA.h
         Automata/Working/RE.cpp Automata/Working/RE.h
         Automata/Working/FA.cpp Automata/Working/FA.h
-        json.hpp Virus.cpp Virus.h Correctness.cpp Correctness.h World.cpp World.h Statistiek.cpp Statistiek.h)
+        json.hpp Virus.cpp Virus.h Correctness.cpp Correctness.h World.cpp World.h Statistiek.cpp Statistiek.h Mens.cpp Mens.h Simulatie.cpp Simulatie.h)

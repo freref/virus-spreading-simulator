@@ -7,6 +7,8 @@
 
 #include <fstream>
 #include <ostream>
+#include <iomanip>
+#include <string>
 #include "json.hpp"
 #include "Automata/Working/DFA.h"
 #include "Automata/Working/NFA.h"
@@ -20,6 +22,8 @@ public:
     json info;
     std::map<std::string, DFA> properties;
 
+    std::string giveName();
+    Virus();
     Virus(std::string path);
     void makeProperties(json &info);
     DFA makeProperty(json::iterator::value_type chance);
@@ -31,6 +35,7 @@ public:
     void rangeNFA(json::iterator &it, std::string &name);
     void integerNFA(json::iterator &it, std::string &name);
     void percentageNFA(json::iterator &it, std::string &name);
+
 };
 
 

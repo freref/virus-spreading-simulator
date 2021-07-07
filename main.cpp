@@ -3,6 +3,7 @@
 #include "Virus.h"
 #include "World.h"
 #include "Statistiek.h"
+#include "Simulatie.h"
 
 using json = nlohmann::json;
 
@@ -19,9 +20,14 @@ int main() {
 
     Statistiek s(w.getPopulatie());
 
-    std::cout << "Er zijn verschillende commando's beschikbaar, 'step n' laat de simulatie n dagen vooruit gaan, 'stat n' "
-                 "geeft een statistisch overzicht van de voorbije n dagen, als n nul is geeft het een overzicht van de "
-                 "hele periode, 'exit' stopt het programma.\n";
+    Simulatie sim(v, w, true);
+
+    std::cout << "Er zijn verschillende commando's beschikbaar:\n"
+                 "'step n' laat de simulatie n dagen vooruit gaan,\n"
+                 "'stat n' geeft een statistisch overzicht van de voorbije n dagen, als n nul is geeft het een overzicht van de hele periode,\n"
+                 "'virus' geeft de karakteristiek van het huidige virus,\n"
+                 "'mutate on/off' zet het muteren van het virus aan of af (standaard aan),\n"
+                 "'exit' stopt het programma.\n";
     std::string input;
     std::cout << "> ";
     std::getline(std::cin, input);
@@ -40,6 +46,16 @@ int main() {
             } else {
                 s.printTijdsOverzicht(dagen);
             }
+        } else if (input == "virus") {
+            std::cout << sim.virus.giveName() << "\n";
+        } else if (input.substr(0, 6) == "mutate") {
+            if (input.substr(7, 2) == "on") {
+                sim.mutate = true;
+            } else {
+                sim.mutate = false;
+            }
+        } else {
+                std::cout << input << " is geen geldig commando.\n";
         }
 
         std::cout << "> ";

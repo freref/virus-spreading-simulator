@@ -60,6 +60,7 @@ void Virus::makeProperty(json::iterator it) {
     }
 }
 
+
 void Virus::rangeNFA(json::iterator &it, std::string &name){
     double c1 = it.value()[0].get<double>();
     double c2 = it.value()[1].get<double>();
@@ -77,6 +78,7 @@ void Virus::rangeNFA(json::iterator &it, std::string &name){
     o << std::setw(4) << n << std::endl;
 }
 
+
 void Virus::integerNFA(json::iterator &it, std::string &name) {
     double integer = it.value().get<double>();
 
@@ -90,6 +92,7 @@ void Virus::integerNFA(json::iterator &it, std::string &name) {
     std::ofstream o(name);
     o << std::setw(4) << n << std::endl;
 }
+
 
 void Virus::percentageNFA(json::iterator &it, std::string &name) {
     double c1 = it.value().get<double>();
@@ -106,4 +109,13 @@ void Virus::percentageNFA(json::iterator &it, std::string &name) {
 
     std::ofstream o(name);
     o << std::setw(4) << n << std::endl;
+}
+
+std::string Virus::giveName() {
+
+    return std::string();
+}
+
+Virus::Virus() {
+
 }

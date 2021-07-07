@@ -16,3 +16,5 @@ WORLD:
     - agrens: asympotmatisch kleiner dan
     - hgrens: hospitalisatie kleiner dan
     - sgrens: sterfte kleiner dan (TODO: overbodig)
+
+Bij working automaten opletten met char/double in alfabet
