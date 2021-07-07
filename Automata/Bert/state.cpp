@@ -1,9 +1,9 @@
 #include "state.h"
 
 
-strvec State::next(char input) {
+strvec State::next(std::string input) {
     strvec volg;
-    if (input == 0) {
+    if (input == "") {
         return volg;
     }
     std::string inp;
@@ -37,7 +37,7 @@ std::vector<State> leidtTot(State staat, std::vector<State> statelist, std::stri
         output.push_back(staat);
         return output;
     } else {
-        strvec volgende = staat.next(input[0]);
+        strvec volgende = staat.next(input);
 
         for (std::string nstnaam : volgende) {
             for (State nstaat : statelist) {

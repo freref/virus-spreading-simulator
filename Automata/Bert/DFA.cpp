@@ -22,7 +22,9 @@ bool DFA::accepts(std::string input) {
     State current = startstaat;
     std::string tnaam;
     for (char c : input) {
-        tnaam = current.next(c)[0];
+        std::string temp = "";
+        temp += c;
+        tnaam = current.next(temp)[0];
         for (State tstaat : states) {
             if (tstaat.naam == tnaam) {
                 current = tstaat;
@@ -122,8 +124,8 @@ void DFA::maal(State s1, State s2, bool doorsnede, std::vector<State> df1, std::
     std::vector<std::vector<State>> teCombStaten;
 
     for (std::string letter : alfabet) {
-        teCombStaten.push_back({namesToStates(s1.next((letter[0])), df1)[0], namesToStates(s2.next((letter[0])), df2)[0]});
-        combstaat.transities.push_back({letter, "(" + s1.next(letter[0])[0] + "," + s2.next(letter[0])[0]+ ")"});
+        teCombStaten.push_back({namesToStates(s1.next((letter)), df1)[0], namesToStates(s2.next((letter)), df2)[0]});
+        combstaat.transities.push_back({letter, "(" + s1.next(letter)[0] + "," + s2.next(letter)[0]+ ")"});
     }
     states.push_back(combstaat);
     for (auto teComb : teCombStaten) {
@@ -156,8 +158,8 @@ DFA::DFA(DFA dfa1, DFA dfa2, bool doorsnede) {
 
     std::vector<State> teCombStaten;
     for (std::string letter : alfabet) {
-        teCombStaten = namesToStates(dfa1.startstaat.next((letter[0])), dfa1.states);
-        teCombStaten.push_back(namesToStates(dfa2.startstaat.next((letter[0])), dfa2.states)[0]);
+        teCombStaten = namesToStates(dfa1.startstaat.next((letter)), dfa1.states);
+        teCombStaten.push_back(namesToStates(dfa2.startstaat.next((letter)), dfa2.states)[0]);
         startstaat.transities.push_back({letter, "(" + teCombStaten[0].naam + "," + teCombStaten[1].naam+ ")"});
         maal(teCombStaten[0], teCombStaten[1], doorsnede, dfa1.states, dfa2.states);
     }

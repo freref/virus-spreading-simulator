@@ -152,7 +152,7 @@ void NFA::toDFArec(NFA* dfa, NFA nfa,  std::vector<State> gestaten) {
         std::vector<strvec> nieuwtransities;
         for (strvec trans : gestaten[i].transities) {
             strvec nieuwtrans = {trans[0]};
-            strvec uitkomst = gestaten[i].next(trans[0][0]); // tweede nul voor: str -> char
+            strvec uitkomst = gestaten[i].next(trans[0]); // tweede nul voor: str -> char EDIT: werkt nu met strings :-)
             nieuwtrans.insert(nieuwtrans.end(), uitkomst.begin(), uitkomst.end());
             nieuwtransities.push_back(nieuwtrans);
         }

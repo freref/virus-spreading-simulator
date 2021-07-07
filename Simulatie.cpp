@@ -27,6 +27,9 @@ void Simulatie::step() {
     std::vector<std::vector<Mens>> newgrid = worldgrid;
 
 
+    if (mutate) {
+        virus.muteer();
+    }
 }
 
 Simulatie::Simulatie() {

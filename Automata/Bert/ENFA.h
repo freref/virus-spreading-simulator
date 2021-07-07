@@ -29,7 +29,7 @@ public:
     ENFA toDFA();
     void toDFArec(ENFA* dfa, ENFA nfa, std::vector<State> staat);
 
-    strvec volgende(State staat, char input);
+    strvec volgende(State staat, std::string input);
 
     ENFA();
 

@@ -101,3 +101,7 @@ std::string Virus::giveName() {
 Virus::Virus() {
 
 }
+
+void Virus::muteer() {
+
+}

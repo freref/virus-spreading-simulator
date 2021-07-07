@@ -22,7 +22,7 @@ std::vector<State> ENFA::epsTransRes(State start) {
 
     while (!meeBezig.empty()) {
         for (State tstaat : meeBezig) {
-            strvec test = tstaat.next(eps[0]);
+            strvec test = tstaat.next(eps);
             tempbezig.insert(tempbezig.end(), test.begin(),  test.end());
         }
         int tot = tempbezig.size();
@@ -47,7 +47,7 @@ std::vector<State> ENFA::epsTransRes(State start) {
  * @return
  */
 
-strvec ENFA::volgende(State staat, char input) {
+strvec ENFA::volgende(State staat, std::string input) {
     strvec output;
 
     std::vector<State> eersteE = epsTransRes(staat);
@@ -274,7 +274,7 @@ void ENFA::toDFArec(ENFA* dfa, ENFA enfa,  std::vector<State> gestaten) {
         for (strvec trans : gestaten[i].transities) {
             if (trans[0] != eps) {
                 strvec nieuwtrans = {trans[0]};
-                strvec uitkomst = volgende(gestaten[i], trans[0][0]); // tweede nul voor: str -> char
+                strvec uitkomst = volgende(gestaten[i], trans[0]); // tweede nul voor: str -> char  EDIT: werkt nu met strings i.p.v. chars! :-)
                 nieuwtrans.insert(nieuwtrans.end(), uitkomst.begin(), uitkomst.end());
                 nieuwtransities.push_back(nieuwtrans);
             }

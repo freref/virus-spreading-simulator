@@ -16,7 +16,7 @@ class State{
 public:
     std::string naam;
     std::vector<strvec> transities;   // [["0", "Q1", "Q3"], ["1", "Q2"]...]
-    strvec next(char input);
+    strvec next(std::string input);
     bool accepting;
     bool starting;
 };

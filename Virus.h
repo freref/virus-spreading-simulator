@@ -23,7 +23,7 @@ public:
     std::map<std::string, NFA> properties;
     NFA virus;
 
-    std::string giveName();
+
     Virus();
     Virus(std::string path);
     void makeProperties(json &info);
@@ -37,6 +37,8 @@ public:
     void integerNFA(json::iterator &it, std::string &name, std::string &title);
     void percentageNFA(json::iterator &it, std::string &name, std::string &title);
 
+    std::string giveName();
+    void muteer();
 };
 
 

@@ -35,9 +35,8 @@ int main() {
     while (input != "exit") {
         if (input.substr(0,4) == "step") {
             int steps = std::stoi(input.substr(5));
-            // TODO: 'steps' stappen in de simulatie
             for (int i = 0; i < steps; i++) {
-                //simualtie +1
+                sim.step();
             }
         } else if (input.substr(0, 4) == "stat") {
             unsigned int dagen = std::stoi(input.substr(5));
