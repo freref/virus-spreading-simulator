@@ -35,12 +35,13 @@ struct State{
     bool starting = false;
     // Stores the transitions from the state
     // [ transChar: { transStates }, ... ]
-    map<double, vector<State*>> transitions;
+public:
+    map<string, vector<State*>> transitions;
 };
 
 // Struct for dead state
 struct deadState : public State {
-    deadState(vector<double>& alphabet);
+    deadState(vector<string>& alphabet);
     bool used = false;
 };
 
@@ -52,7 +53,7 @@ class FA {
 protected:
     vector<State*> states;
     vector<State*> acceptingStates;
-    vector<double> alphabet;
+    vector<string> alphabet;
     State* startState;
     string type;
 public:
@@ -63,7 +64,7 @@ public:
     void clear();
 
     // Set the alphabet of the FA
-    void setAlphabet(const vector<double>& v) {alphabet = v;}
+    void setAlphabet(const vector<string>& v) {alphabet = v;}
 
     // Add a single state to the FA
     void addState(State* state) {states.push_back(state);}

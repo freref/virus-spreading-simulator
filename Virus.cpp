@@ -17,27 +17,6 @@ void Virus::correctness() {
 
 void Virus::makeVirus() {
     makeProperties();
-
-    DFA a = NFA("Virus/mutatie%.json").toDFA();
-    DFA b = NFA("Virus/mutatie%.json").toDFA();
-    DFA ab(a, b, true);
-
-    //DFA d = NFA("Virus/incubatietijdN.json").toDFA();
-    //DFA e = NFA("Virus/mutatie%.json").toDFA();
-    //DFA f = NFA("Virus/mutatieR.json").toDFA();
-    //DFA g = NFA("Virus/sterftegraad%.json").toDFA();
-    //DFA h = NFA("Virus/ziekte%.json").toDFA();
-
-
-    //DFA abc(ab, c, true);
-    //DFA abcd(abc, d, true);
-    //DFA abcde(abcd, e, true);
-    //DFA abcdef(abcde, f, true);
-    //DFA abcdefg(abcdef, g, true);
-    //DFA abcdefh(abcdefg, h, true);
-
-    //std::ofstream o("lol");
-    //o << std::setw(4) << n << std::endl;
 }
 
 void Virus::makeProperties() {
@@ -48,71 +27,74 @@ void Virus::makeProperties() {
 
 void Virus::makeProperty(json::iterator it) {
     std::string name = "Virus/"+it.key()+".json";
+    std::string title = it.key();
 
     if(percentageKey.toENFA().accepts(it.key()) || questionKey.toENFA().accepts(it.key())){
-        percentageNFA(it, name);
+        percentageNFA(it, name, title);
     }
     else if (integersKey.toENFA().accepts(it.key())){
-        integerNFA(it, name);
+        integerNFA(it, name, title);
     }
     else if (rangeKey.toENFA().accepts(it.key())){
-        rangeNFA(it, name);
+        rangeNFA(it, name, title);
     }
 }
 
 
-void Virus::rangeNFA(json::iterator &it, std::string &name){
+void Virus::rangeNFA(json::iterator &it, std::string &name, std::string &title){
     double c1 = it.value()[0].get<double>();
     double c2 = it.value()[1].get<double>();
 
     json n;
     n["type"] = "NFA";
-    n["alphabet"] = {c1, c2};
+    n["alphabet"] = {to_string(c1), to_string(c2)};
     n["states"] = {{{"name", "a"}, {"starting", true}, {"accepting", false}},
                    {{"name", "b"}, {"starting", false}, {"accepting", false}},
                    {{"name", "c"}, {"starting", false}, {"accepting", true}}};
-    n["transitions"] = {{{"from", "a"}, {"to", "b"}, {"input", c1}},
-                        {{"from", "b"}, {"to", "c"}, {"input", c2}}};
+    n["transitions"] = {{{"from", "a"}, {"to", "b"}, {"input", to_string(c1)}},
+                        {{"from", "b"}, {"to", "c"}, {"input", to_string(c2)}}};
 
     std::ofstream o(name);
     o << std::setw(4) << n << std::endl;
+    properties[title] = NFA(name);
 }
 
 
-void Virus::integerNFA(json::iterator &it, std::string &name) {
+void Virus::integerNFA(json::iterator &it, std::string &name, std::string &title) {
     double integer = it.value().get<double>();
 
     json n;
     n["type"] = "NFA";
-    n["alphabet"] = {integer};
+    n["alphabet"] = {to_string(integer)};
     n["states"] = {{{"name", "a"}, {"starting", true}, {"accepting", false}},
                    {{"name", "b"}, {"starting", false}, {"accepting", true}}};
-    n["transitions"] = {{{"from", "a"}, {"to", "b"}, {"input", integer}}};
+    n["transitions"] = {{{"from", "a"}, {"to", "b"}, {"input", to_string(integer)}}};
 
     std::ofstream o(name);
     o << std::setw(4) << n << std::endl;
+    properties[title] = NFA(name);
 }
 
 
-void Virus::percentageNFA(json::iterator &it, std::string &name) {
+void Virus::percentageNFA(json::iterator &it, std::string &name, std::string &title) {
     double c1 = it.value().get<double>();
     double c2 = 1.0-c1;
 
     json n;
     n["type"] = "NFA";
-    n["alphabet"] = {c1, c2};
+    n["alphabet"] = {to_string(c1), to_string(c2)};
     n["states"] = {{{"name", "a"}, {"starting", true}, {"accepting", false}},
                    {{"name", "b"}, {"starting", false}, {"accepting", true}},
                    {{"name", "c"}, {"starting", false}, {"accepting", false}}};
-    n["transitions"] = {{{"from", "a"}, {"to", "b"}, {"input", c1}},
-                        {{"from", "a"}, {"to", "c"}, {"input", c2}}};
+    n["transitions"] = {{{"from", "a"}, {"to", "b"}, {"input", to_string(c1)}},
+                        {{"from", "a"}, {"to", "c"}, {"input", to_string(c2)}}};
 
     std::ofstream o(name);
     o << std::setw(4) << n << std::endl;
+    properties[title] = NFA(name);
 }
 
 std::string Virus::giveName() {
-
     return std::string();
 }
 

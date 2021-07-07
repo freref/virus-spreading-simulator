@@ -20,7 +20,8 @@ using json = nlohmann::json;
 class Virus {
 public:
     json info;
-    std::map<std::string, DFA> properties;
+    std::map<std::string, NFA> properties;
+    NFA virus;
 
     std::string giveName();
     Virus();
@@ -32,9 +33,9 @@ public:
     void makeVirus();
     void makeProperties();
     void makeProperty(json::iterator it);
-    void rangeNFA(json::iterator &it, std::string &name);
-    void integerNFA(json::iterator &it, std::string &name);
-    void percentageNFA(json::iterator &it, std::string &name);
+    void rangeNFA(json::iterator &it, std::string &name, std::string &title);
+    void integerNFA(json::iterator &it, std::string &name, std::string &title);
+    void percentageNFA(json::iterator &it, std::string &name, std::string &title);
 
 };
 

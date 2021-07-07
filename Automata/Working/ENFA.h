@@ -12,7 +12,7 @@ class DFA;
 
 class ENFA : public FA {
     // chosen epsilon character
-    char epsilon;
+    string epsilon;
 
     // Creates combined state from states in given states vector
     // Recursively creates transition states

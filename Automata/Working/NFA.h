@@ -17,7 +17,7 @@ class NFA: public FA {
 public:
     // Constructor
     NFA(const string &fileName);
-
+    NFA(){};
     // Checks whether string is accepted by NFA
     bool accepts(const string &inString) const;
     // Returns DFA created from the NFA
