@@ -11,18 +11,19 @@
 class REnode {
 public:
     std::string naam;
-    REnode(std::string& name);
+    REnode(std::string name, int num);
+    int vriendje;
 
+    int nummer;
 };
 
 class RE {
 public:
     std::string eps;
-    std::vector<REnode> startnodes;
-    std::vector<REnode> eindnodes;
     std::vector<std::string> alfabet;
     std::string expressie;
     std::vector<REnode> nodes;
+
 
     void addToAlphabet(std::string& in);
 
