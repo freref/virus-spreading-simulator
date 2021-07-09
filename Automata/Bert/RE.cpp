@@ -21,9 +21,10 @@ REnode::REnode(std::string name, int num) {
 }
 
 
-RE::RE(std::string inp, std::string eps) {
+RE::RE(std::string inp, std::string& epsin) {
     char c;
     std::vector<int> lhaakjes;
+    eps = epsin;
 
 
     for (int i = 0; i <= inp.size(); i++) {
