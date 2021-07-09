@@ -6,7 +6,12 @@ void RE::print() {
 }
 
 void RE::addToAlphabet(std::string& in) {
-
+    for (int i = 0; i < alfabet.size(); i++) { // we gaan door het alfabet, komen we "in" tegen, dan stoppen we de hele functie, zijn we op het einde "in" nog niet tegen gekomen, dan voegen we het toe.
+        if (alfabet[i] == in) {
+            return;
+        }
+    }
+    alfabet.push_back(in);
 }
 
 REnode::REnode(std::string name, int num) {
@@ -16,7 +21,7 @@ REnode::REnode(std::string name, int num) {
 }
 
 
-RE::RE(std::string inp) {
+RE::RE(std::string inp, std::string eps) {
     char c;
     std::vector<int> lhaakjes;
 
@@ -46,7 +51,9 @@ RE::RE(std::string inp) {
                 naam += c;
                 i++;
             }
-            addToAlphabet(naam);
+            if (naam != eps) {
+                addToAlphabet(naam);
+            }
             i--;
             REnode nieuw(naam, nodes.size());
 

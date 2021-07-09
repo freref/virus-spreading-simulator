@@ -27,7 +27,7 @@ public:
 
     void addToAlphabet(std::string& in);
 
-    RE(std::string);
+    RE(std::string in, std::string eps);
     void print();
     ENFA toENFA();
     bool accepts();
