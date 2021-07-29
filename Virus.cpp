@@ -38,7 +38,8 @@ void Virus::makeProperty(json::iterator it) {
     else if (rangeKeyENFA.accepts(it.key())){
         rangeNFA(it, name, title);
     }
-    properties[title] = ENFA(name);
+    ENFA placeholder = ENFA(name);
+    //properties[title] = placeholder;
 }
 
 
