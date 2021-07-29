@@ -186,7 +186,7 @@ string ENFA::createStates(map<string, State *> &stateMap, vector<State *> &state
         nState->name = name;
         nState->accepting = accepting;
         stateMap.insert({name, nState});
-        for (string c : alphabet) {
+        for (char c : alphabet) {
             vector<State *> transStates;
             for (auto state : states) {
                 vector<State*> transV = state->transitions[c];
@@ -242,7 +242,7 @@ DFA ENFA::toDFA() {
 
 json ENFA::createJson() const {
     json j = FA::createJson();
-    j["eps"] = epsilon;
+    j["eps"] = string(1, epsilon);
     return j;
 }
 

@@ -9,11 +9,11 @@ using json = nlohmann::json;
 
 
 int main() {
-    std::string virus = "../Input/Virus/virus1.json";
-    std::string world = "../Input/World/world1.json";
+    std::string virus = "Virus/virus1.json";
+    std::string world = "World/world1.json";
 
     Virus v(virus);
-    v.correctness();
+    //v.correctness();
     v.makeVirus();
 
     World w(world);
@@ -21,7 +21,7 @@ int main() {
     Statistiek s(w.getPopulatie());
 
     Simulatie sim(v, w, true);
-
+/*
     std::cout << "Er zijn verschillende commando's beschikbaar:\n"
                  "'step n' laat de simulatie n dagen vooruit gaan,\n"
                  "'stat n' geeft een statistisch overzicht van de voorbije n dagen, als n nul is geeft het een overzicht van de hele periode,\n"
@@ -60,7 +60,7 @@ int main() {
         std::cout << "> ";
         std::getline(std::cin, input);
     }
+    */
     //std::cout << "Nog een fijne dag!\n";
-
     return 0;
 }

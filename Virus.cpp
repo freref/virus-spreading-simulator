@@ -26,18 +26,19 @@ void Virus::makeProperties() {
 }
 
 void Virus::makeProperty(json::iterator it) {
-    std::string name = "Virus/"+it.key()+".json";
+    std::string name = "../Output/"+it.key()+".json";
     std::string title = it.key();
 
-    if(percentageKey.toENFA().accepts(it.key()) || questionKey.toENFA().accepts(it.key())){
+    if(percentageKeyENFA.accepts(it.key()) || questionKeyENFA.accepts(it.key())){
         percentageNFA(it, name, title);
     }
-    else if (integersKey.toENFA().accepts(it.key())){
+    else if (integersKeyENFA.accepts(it.key())){
         integerNFA(it, name, title);
     }
-    else if (rangeKey.toENFA().accepts(it.key())){
+    else if (rangeKeyENFA.accepts(it.key())){
         rangeNFA(it, name, title);
     }
+    properties[title] = ENFA(name);
 }
 
 
@@ -46,7 +47,8 @@ void Virus::rangeNFA(json::iterator &it, std::string &name, std::string &title){
     double c2 = it.value()[1].get<double>();
 
     json n;
-    n["type"] = "NFA";
+    n["type"] = "ENFA";
+    n["eps"] = "Q";
     n["alphabet"] = {to_string(c1), to_string(c2)};
     n["states"] = {{{"name", "a"}, {"starting", true}, {"accepting", false}},
                    {{"name", "b"}, {"starting", false}, {"accepting", false}},
@@ -56,7 +58,6 @@ void Virus::rangeNFA(json::iterator &it, std::string &name, std::string &title){
 
     std::ofstream o(name);
     o << std::setw(4) << n << std::endl;
-    properties[title] = NFA(name);
 }
 
 
@@ -64,7 +65,8 @@ void Virus::integerNFA(json::iterator &it, std::string &name, std::string &title
     double integer = it.value().get<double>();
 
     json n;
-    n["type"] = "NFA";
+    n["type"] = "ENFA";
+    n["eps"] = "Q";
     n["alphabet"] = {to_string(integer)};
     n["states"] = {{{"name", "a"}, {"starting", true}, {"accepting", false}},
                    {{"name", "b"}, {"starting", false}, {"accepting", true}}};
@@ -72,7 +74,6 @@ void Virus::integerNFA(json::iterator &it, std::string &name, std::string &title
 
     std::ofstream o(name);
     o << std::setw(4) << n << std::endl;
-    properties[title] = NFA(name);
 }
 
 
@@ -81,7 +82,8 @@ void Virus::percentageNFA(json::iterator &it, std::string &name, std::string &ti
     double c2 = 1.0-c1;
 
     json n;
-    n["type"] = "NFA";
+    n["type"] = "ENFA";
+    n["eps"] = "Q";
     n["alphabet"] = {to_string(c1), to_string(c2)};
     n["states"] = {{{"name", "a"}, {"starting", true}, {"accepting", false}},
                    {{"name", "b"}, {"starting", false}, {"accepting", true}},
@@ -91,7 +93,6 @@ void Virus::percentageNFA(json::iterator &it, std::string &name, std::string &ti
 
     std::ofstream o(name);
     o << std::setw(4) << n << std::endl;
-    properties[title] = NFA(name);
 }
 
 std::string Virus::giveName() {
