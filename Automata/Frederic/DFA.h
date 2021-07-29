@@ -42,6 +42,7 @@ public:
 
     void product(const string &d1, const string &d2);
 
+    DFA(){};
     explicit DFA(string p);
     DFA(DFA dfa1, DFA dfa2, bool doorsnede);
 

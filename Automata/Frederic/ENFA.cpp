@@ -31,8 +31,8 @@ ENFA::ENFA(string p) {
 //zoekt de volgende nodes adhv een input
 void ENFA::nextNodes(vector<int> *nodes, string input) {
     vector<int> new_states;
-    for (auto node : *nodes) {
-        for (auto transition : enfa["transitions"]) {
+    for (auto const &node : *nodes) {
+        for (auto const &transition : enfa["transitions"]) {
             if (transition["from"] == node && transition["input"] == input &&
                 count(new_states.begin(), new_states.end(), transition["to"]) == 0)
                 new_states.push_back(transition["to"]);
@@ -46,15 +46,18 @@ void ENFA::nextNodes(vector<int> *nodes, string input) {
  * @param nodes
  */
 //probeert een epsilon transitie voor alle states
-void ENFA::tryEps(vector<int> *nodes) {
-    for (auto node : *nodes) {
-        for (auto transition : enfa["transitions"]) {
-            if (transition["from"] == node && transition["input"] == eps &&
-                count(nodes->begin(), nodes->end(), transition["to"]) == 0) {
-                nodes->push_back(transition["to"]);
-                return tryEps(nodes);
+void ENFA::tryEps(vector<int> &nodes) {
+    for (auto const &node : nodes) {
+        if(std::find(triedNodes.begin(), triedNodes.end(), node) == triedNodes.end()){
+            for (auto const &transition : enfa["transitions"]) {
+                if (transition["from"] == node && transition["input"] == eps &&
+                    count(nodes.begin(), nodes.end(), transition["to"]) == 0) {
+                    nodes.push_back(transition["to"]);
+                    return tryEps(nodes);
+                }
             }
         }
+        triedNodes.push_back(node);
     }
 }
 
@@ -66,15 +69,16 @@ void ENFA::tryEps(vector<int> *nodes) {
 //checkt of een string accepterend is in de ENFA
 bool ENFA::accepts(string input) {
     vector<int> states = {0};
-    tryEps(&states);
-    for (auto c : input) {
+    tryEps(states);
+    for (auto const &c : input) {
         string character(1, c);
         nextNodes(&states, character);
-        tryEps(&states);
+        triedNodes = {};
+        tryEps(states);
     }
-
     return (count(states.begin(), states.end(), enfa["states"].size() - 1) == 1);
 }
+
 /**
  *
  * @param elem

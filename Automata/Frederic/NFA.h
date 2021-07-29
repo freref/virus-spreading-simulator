@@ -22,6 +22,7 @@ public:
 
     explicit NFA(string p);
 
+    NFA(){};
     DFA toDFA();
     void subsetConstruction(vector<string> const &state);
     void addState(string name, bool starting, bool accepting);

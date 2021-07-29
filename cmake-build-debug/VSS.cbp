@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="VSS"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/Frederic/Documents/project/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Frederic/Documents/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Frederic/Documents/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Frederic/Documents/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Frederic/Documents/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="VSS">
+				<Option output="C:/Users/Frederic/Documents/project/cmake-build-debug/VSS.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Frederic/Documents/project/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Frederic/Documents/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 VSS"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Frederic/Documents/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Frederic/Documents/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Frederic/Documents/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="VSS/fast">
+				<Option output="C:/Users/Frederic/Documents/project/cmake-build-debug/VSS.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Frederic/Documents/project/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Frederic/Documents/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 VSS/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Frederic/Documents/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Frederic/Documents/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Frederic/Documents/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/Frederic/Documents/project/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Frederic/Documents/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Frederic/Documents/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Frederic/Documents/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Frederic/Documents/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/Frederic/Documents/project/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Frederic/Documents/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Frederic/Documents/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Frederic/Documents/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Frederic/Documents/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/Frederic/Documents/project/Automata.cpp">
+			<Option target="VSS"/>
+		</Unit>
+		<Unit filename="C:/Users/Frederic/Documents/project/Automata.h">
+			<Option target="VSS"/>
+		</Unit>
+		<Unit filename="C:/Users/Frederic/Documents/project/Automata/Frederic/DFA.cpp">
+			<Option target="VSS"/>
+		</Unit>
+		<Unit filename="C:/Users/Frederic/Documents/project/Automata/Frederic/DFA.h">
+			<Option target="VSS"/>
+		</Unit>
+		<Unit filename="C:/Users/Frederic/Documents/project/Automata/Frederic/ENFA.cpp">
+			<Option target="VSS"/>
+		</Unit>
+		<Unit filename="C:/Users/Frederic/Documents/project/Automata/Frederic/ENFA.h">
+			<Option target="VSS"/>
+		</Unit>
+		<Unit filename="C:/Users/Frederic/Documents/project/Automata/Frederic/NFA.cpp">
+			<Option target="VSS"/>
+		</Unit>
+		<Unit filename="C:/Users/Frederic/Documents/project/Automata/Frederic/NFA.h">
+			<Option target="VSS"/>
+		</Unit>
+		<Unit filename="C:/Users/Frederic/Documents/project/Automata/Frederic/RE.cpp">
+			<Option target="VSS"/>
+		</Unit>
+		<Unit filename="C:/Users/Frederic/Documents/project/Automata/Frederic/RE.h">
+			<Option target="VSS"/>
+		</Unit>
+		<Unit filename="C:/Users/Frederic/Documents/project/Correctness.cpp">
+			<Option target="VSS"/>
+		</Unit>
+		<Unit filename="C:/Users/Frederic/Documents/project/Correctness.h">
+			<Option target="VSS"/>
+		</Unit>
+		<Unit filename="C:/Users/Frederic/Documents/project/Mens.cpp">
+			<Option target="VSS"/>
+		</Unit>
+		<Unit filename="C:/Users/Frederic/Documents/project/Mens.h">
+			<Option target="VSS"/>
+		</Unit>
+		<Unit filename="C:/Users/Frederic/Documents/project/Simulatie.cpp">
+			<Option target="VSS"/>
+		</Unit>
+		<Unit filename="C:/Users/Frederic/Documents/project/Simulatie.h">
+			<Option target="VSS"/>
+		</Unit>
+		<Unit filename="C:/Users/Frederic/Documents/project/Statistiek.cpp">
+			<Option target="VSS"/>
+		</Unit>
+		<Unit filename="C:/Users/Frederic/Documents/project/Statistiek.h">
+			<Option target="VSS"/>
+		</Unit>
+		<Unit filename="C:/Users/Frederic/Documents/project/Virus.cpp">
+			<Option target="VSS"/>
+		</Unit>
+		<Unit filename="C:/Users/Frederic/Documents/project/Virus.h">
+			<Option target="VSS"/>
+		</Unit>
+		<Unit filename="C:/Users/Frederic/Documents/project/World.cpp">
+			<Option target="VSS"/>
+		</Unit>
+		<Unit filename="C:/Users/Frederic/Documents/project/World.h">
+			<Option target="VSS"/>
+		</Unit>
+		<Unit filename="C:/Users/Frederic/Documents/project/json.hpp">
+			<Option target="VSS"/>
+		</Unit>
+		<Unit filename="C:/Users/Frederic/Documents/project/main.cpp">
+			<Option target="VSS"/>
+		</Unit>
+		<Unit filename="C:/Users/Frederic/Documents/project/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

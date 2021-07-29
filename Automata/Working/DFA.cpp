@@ -27,7 +27,7 @@ DFA::DFA(const string &fileName) : FA(fileName) {
     for (auto state : states) {
         vector<string> charCheck; // Checks transition characters
         for (auto trans : state->transitions) {
-            charCheck.push_back((trans.first));
+            charCheck.push_back(to_string(trans.first));
             if (trans.second.size() > 1) { // More than 1 transition on character
                 cerr << "Multiple transitions on same input '" << trans.first << "' for state '" << state->name << "' in DFA\n";
             }
@@ -168,7 +168,7 @@ string DFA::createProductStates(map<string, State *> &stateMap, State* st1, Stat
         // Add to map
         stateMap.insert({name, nState});
         // Loop over the alphabet
-        for (string c : alphabet) {
+        for (char c : alphabet) {
             // Get transitions from both states
             State* trans1 = st1->transitions[c][0];
             State* trans2 = st2->transitions[c][0];
@@ -452,7 +452,7 @@ void DFA::createMinimizedState(set<string> &stateNames) {
 bool DFA::accepts(const string &inString) const {
     State* curState = startState;
     for (char c : inString) { // Go over characters
-        curState = curState->transitions[string(1, c)][0]; // Get next state
+        curState = curState->transitions[c][0]; // Get next state
     }
     for (auto state : acceptingStates) { // Check if accepting state
         if (curState == state) return true;

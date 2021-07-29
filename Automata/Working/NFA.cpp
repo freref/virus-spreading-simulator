@@ -17,6 +17,7 @@ NFA::NFA(const string &fileName) : FA(fileName) {
         cerr << "Wrong type in input file." << endl;
     type = "NFA";
 }
+
 /**
  * Checks whether the given string gets accepted by the FA
  * @param inString: Input string
@@ -35,7 +36,7 @@ bool NFA::accepts(const string &inString) const {
         // Go over all current states
         for (auto curState : curStates) {
             // Add destination states for transition on character to tempStates vector
-            tempStates.insert(end(tempStates), begin(curState->transitions[string(1, c)]), end(curState->transitions[string(1, c)]));
+            tempStates.insert(end(tempStates), begin(curState->transitions[c]), end(curState->transitions[c]));
         }
         // Update current states to tempStates (destination states)
         curStates = tempStates;
@@ -88,7 +89,7 @@ string NFA::createStates(map<string, State*> &stateMap, vector<State*> &states, 
         nState->accepting = accepting;
         stateMap.insert( {name, nState} );
         // Go over alphabet
-        for (string c : alphabet) {
+        for (char c : alphabet) {
             // Vector to add all destination states on transition for alphabet character
             vector<State *> transStates;
             // Go over states in states vector
@@ -131,7 +132,6 @@ DFA NFA::toDFA() {
 
     // Set up parameters to create states
     map<string, State*> stateMap;
-
     vector<State*> states{startState};
     // Combine the states of the NFA starting from the start state
     string sState = createStates(stateMap, states, dead);

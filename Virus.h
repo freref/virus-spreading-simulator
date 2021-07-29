@@ -10,8 +10,8 @@
 #include <iomanip>
 #include <string>
 #include "json.hpp"
-#include "Automata/Working/DFA.h"
-#include "Automata/Working/NFA.h"
+#include "Automata/Frederic/DFA.h"
+#include "Automata/Frederic/ENFA.h"
 #include "Correctness.h"
 #include <iomanip>
 
@@ -20,8 +20,7 @@ using json = nlohmann::json;
 class Virus {
 public:
     json info;
-    std::map<std::string, NFA> properties;
-    NFA virus;
+    std::map<std::string, ENFA> properties;
 
 
     Virus();

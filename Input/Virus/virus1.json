@@ -3,8 +3,8 @@
   "sterftegraad%": 0.02,
   "incubatietijdN": 4,
   "ziekte%": 0.5,
-  "incubatie?": 1,
-  "asymptomatisch?": 0,
+  "incubatieB": 1,
+  "asymptomatischB": 0,
   "mutatie%": 0.10,
   "mutatieR": [0.05, 1]
 }
