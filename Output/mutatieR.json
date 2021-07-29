@@ -1,0 +1,37 @@
+{
+    "alphabet": [
+        "0.050000",
+        "1.000000"
+    ],
+    "eps": "Q",
+    "states": [
+        {
+            "accepting": false,
+            "name": "a",
+            "starting": true
+        },
+        {
+            "accepting": false,
+            "name": "b",
+            "starting": false
+        },
+        {
+            "accepting": true,
+            "name": "c",
+            "starting": false
+        }
+    ],
+    "transitions": [
+        {
+            "from": "a",
+            "input": "0.050000",
+            "to": "b"
+        },
+        {
+            "from": "b",
+            "input": "1.000000",
+            "to": "c"
+        }
+    ],
+    "type": "ENFA"
+}
