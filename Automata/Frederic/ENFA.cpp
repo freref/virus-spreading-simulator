@@ -346,5 +346,5 @@ ENFA ENFA::product(vector<ENFA> &enfas){
     file << new_enfa;
     file.close();
     counter++;
-    return ENFA(to_string(counter-1)+"ProductENFA.json");
+    return ENFA("../Output/virus"+to_string(counter-1)+".json");
 }

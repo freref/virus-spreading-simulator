@@ -22,7 +22,6 @@ void Virus::makeVirus() {
     for(auto &property : properties){
         p.push_back(property.second);
     }
-
     ENFA virus = p[0].product(p);
 }
 
