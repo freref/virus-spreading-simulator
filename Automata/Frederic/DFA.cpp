@@ -317,9 +317,8 @@ void DFA::getStates(){
         else
             starting[state["name"]]= false;
 
-
         if(!state["accepting"] && !state["starting"])
-            s.push_back(stoi(string(state["name"])));
+            s.push_back(((state["name"])));
     }
     sort(stateNames.begin(), stateNames.end());
     sort(s.begin(), s.end());
@@ -416,8 +415,9 @@ RE DFA::toRE() {
     startTransitions();
     getStates();
     sumEquals();
+
     for(auto state : s){
-        string st = to_string(state);
+        string st = (state);
         removeState(st, findAddative(st));
         sumEquals();
     }
@@ -435,16 +435,20 @@ RE DFA::toRE() {
 //      (f(d)*f+d(d+f(d)*f))(f+d)*
 
 //zoekt de start kruisjes (waar een accepterend state is)
-void DFA::startingX(){
+bool DFA::startingX(){
+    bool check = false;
     for(auto const &name1 : stateNames){
         for(auto const &name2 : stateNames){
             if(accepting[name1] ^ accepting[name2]){
                 table[{name1, name2}] = true;
+                check = true;
             }
-            else
+            else{
                 table[{name1, name2}] = false;
+            }
         }
     }
+    return check;
 }
 
 //checkt of string op een kruisje valt
@@ -568,6 +572,7 @@ void DFA::findStates(){
     set<string> check;
     vector<vector<string>> new_states;
     vector<vector<string>> old_states;
+
     for(auto const &name1 : stateNames){
         for(auto const &name2 : stateNames){
             if(name1 < name2 && !table[{name1, name2}]){
@@ -617,10 +622,11 @@ string DFA::createDFA(){
     new_dfa["transitions"].erase(new_dfa["transitions"].begin());
     new_dfa["transitions"].erase(new_dfa["transitions"].begin());
 
-    ofstream file("TableFillingDFA.json");
+    ofstream file(to_string(counter)+"TableFillingDFA.json");
     file << new_dfa;
     file.close();
-    return "TableFillingDFA.json";
+    counter++;
+    return to_string(counter-1)+"TableFillingDFA.json";
 }
 
 /**
@@ -628,13 +634,35 @@ string DFA::createDFA(){
  * @return
  */
 DFA DFA::minimize(){
+    bool check = false;
+
     getStates();
     startingX();
+
     map<vector<string>, bool> prevTable;
     while(prevTable != table){
         prevTable = table;
         recursiveX();
     }
+
+    for(int x = 1; x < stateNames.size(); x++){
+        for(int y = 0; y < x; y++){
+            string first = stateNames[x];
+            string second = stateNames[y];
+            if(!table[{first, second}])
+                check = true;
+        }
+    }
+
+    if(!check){
+        ofstream file(to_string(counter)+"TableFillingDFA.json");
+        file << dfa;
+        file.close();
+        counter++;
+        DFA d(to_string(counter-1)+"TableFillingDFA.json");
+        return d;
+    }
+
     DFA d(createDFA());
     return d;
 }
@@ -658,4 +686,10 @@ void DFA::printTable(){
     cout << "\t";
     for(int i = 0; i < stateNames.size()-1; i++){cout << stateNames[i] << "\t";}
     cout << endl;
+}
+
+bool DFA::operator==(DFA &d) {
+    DFA a = d.minimize();
+    DFA b = this->minimize();
+    return (a.dfa == b.dfa);
 }

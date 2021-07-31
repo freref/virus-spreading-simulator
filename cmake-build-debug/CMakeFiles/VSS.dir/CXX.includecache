@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Frederic/Documents/project/Automata.h
-Automata/Frederic/RE.h
-C:/Users/Frederic/Documents/project/Automata/Frederic/RE.h
-
 C:/Users/Frederic/Documents/project/Automata/Frederic/DFA.h
 ../../json.hpp
 C:/Users/Frederic/Documents/project/json.hpp
@@ -20,6 +16,16 @@ string
 iostream
 -
 set
+-
+map
+-
+
+C:/Users/Frederic/Documents/project/Automata/Frederic/ENFA.cpp
+ENFA.h
+C:/Users/Frederic/Documents/project/Automata/Frederic/ENFA.h
+../../json.hpp
+C:/Users/Frederic/Documents/project/json.hpp
+fstream
 -
 map
 -
@@ -42,36 +48,6 @@ C:/Users/Frederic/Documents/project/Automata/Frederic/ENFA.h
 string
 -
 set
--
-
-C:/Users/Frederic/Documents/project/Correctness.h
-json.hpp
-C:/Users/Frederic/Documents/project/json.hpp
-Automata.h
-C:/Users/Frederic/Documents/project/Automata.h
-
-C:/Users/Frederic/Documents/project/Virus.cpp
-Virus.h
-C:/Users/Frederic/Documents/project/Virus.h
-
-C:/Users/Frederic/Documents/project/Virus.h
-fstream
--
-ostream
--
-iomanip
--
-string
--
-json.hpp
-C:/Users/Frederic/Documents/project/json.hpp
-Automata/Frederic/DFA.h
-C:/Users/Frederic/Documents/project/Automata/Frederic/DFA.h
-Automata/Frederic/ENFA.h
-C:/Users/Frederic/Documents/project/Automata/Frederic/ENFA.h
-Correctness.h
-C:/Users/Frederic/Documents/project/Correctness.h
-iomanip
 -
 
 C:/Users/Frederic/Documents/project/json.hpp

@@ -17,6 +17,12 @@ void Virus::correctness() {
 
 void Virus::makeVirus() {
     makeProperties();
+
+    vector<ENFA> p;
+    for(auto &property : properties){
+        p.push_back(property.second);
+    }
+    ENFA virus = p[0].product(p);
 }
 
 void Virus::makeProperties() {
@@ -38,8 +44,7 @@ void Virus::makeProperty(json::iterator it) {
     else if (rangeKeyENFA.accepts(it.key())){
         rangeNFA(it, name, title);
     }
-    ENFA placeholder = ENFA(name);
-    //properties[title] = placeholder;
+    properties[title] = ENFA(name);
 }
 
 
