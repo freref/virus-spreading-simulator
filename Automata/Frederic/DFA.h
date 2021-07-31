@@ -35,7 +35,8 @@ public:
     map<string, bool> starting;
     map<string, bool> accepting;
     vector<vector<transition>> transitions;
-    vector<int> s;
+    vector<string> s;
+    int counter = 0;
     set<vector<string>> states;
     map<vector<string>, bool> table;
     map<string, vector<transition>> sortedTransitions;
@@ -65,7 +66,7 @@ public:
     string findAddative(string const &state);
     DFA minimize();
     void printTable();
-    void startingX();
+    bool startingX();
     void recursiveX();
     bool acceptCheck(string name1, string name2);
     string createDFA();
@@ -74,6 +75,7 @@ public:
     void makeTransitions(vector<vector<string>> const &states);
     static string vToString(vector<string> const &vec);
     static vector<string> toCheck(vector<string> to, vector<vector<string>> const &st);
+    bool operator==(DFA &d);
 };
 
 

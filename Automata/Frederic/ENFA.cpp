@@ -294,3 +294,57 @@ DFA ENFA::toDFA() {
     file.close();
     return DFA(path + ".2DFA.json");
 }
+
+ENFA ENFA::product(vector<ENFA> &enfas){
+    json new_enfa = {
+            {"type", "ENFA"},
+            {"alphabet", {"", ""}},
+            {"eps", enfas[0].eps},
+            {"states", {{{"name", "start"},
+                        {"starting", true},
+                        {"accepting", false}},
+
+                        {{"name", "end"},
+                        {"starting", false},
+                        {"accepting", true}}}},
+             {"transitions", {"", ""}}
+            };
+
+    for(ENFA &e : enfas){
+        for(auto &sta : e.enfa["transitions"]){
+            new_enfa["transitions"].push_back({{"from", sta["from"]}, {"to", sta["to"]}, {"input", sta["input"]}});
+        }
+        for(auto &sta : e.enfa["alphabet"]){
+            new_enfa["alphabet"].push_back(sta);
+        }
+        for(auto &sta : e.enfa["states"]){
+            new_enfa["states"].push_back({{"name", sta["name"]}, {"starting", sta["starting"]}, {"accepting", sta["accepting"]}});
+            if(sta["starting"] == true){
+                new_enfa["transitions"].push_back({{"to", sta["name"]}, {"from", "start"}, {"input", e.eps}});
+            }
+            else if(sta["accepting"] == true){
+                new_enfa["transitions"].push_back({{"to", "end"}, {"from", sta["name"]}, {"input", e.eps}});
+            }
+        }
+    }
+
+    for(auto &sta : new_enfa["states"]){
+        if(sta["name"] != "start"){
+            sta["starting"] = false;
+        }
+        if(sta["name"] != "end"){
+            sta["accepting"] = false;
+        }
+    }
+
+    new_enfa["transitions"].erase(new_enfa["transitions"].begin());
+    new_enfa["transitions"].erase(new_enfa["transitions"].begin());
+    new_enfa["alphabet"].erase(new_enfa["alphabet"].begin());
+    new_enfa["alphabet"].erase(new_enfa["alphabet"].begin());
+
+    ofstream file("../Output/virus"+to_string(counter)+".json");
+    file << new_enfa;
+    file.close();
+    counter++;
+    return ENFA(to_string(counter-1)+"ProductENFA.json");
+}
