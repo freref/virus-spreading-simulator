@@ -7,30 +7,30 @@
     "states": [
         {
             "accepting": false,
-            "name": "a",
+            "name": "3",
             "starting": true
         },
         {
             "accepting": true,
-            "name": "b",
+            "name": "4",
             "starting": false
         },
         {
             "accepting": false,
-            "name": "c",
+            "name": "5",
             "starting": false
         }
     ],
     "transitions": [
         {
-            "from": "a",
+            "from": "3",
             "input": "0.100000",
-            "to": "b"
+            "to": "4"
         },
         {
-            "from": "a",
+            "from": "3",
             "input": "0.900000",
-            "to": "c"
+            "to": "5"
         }
     ],
     "type": "ENFA"

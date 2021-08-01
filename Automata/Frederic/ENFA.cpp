@@ -151,8 +151,18 @@ bool ENFA::accept(vector<string> new_state) {
  */
 //zet vector om in string
 string ENFA::vecToString(vector<string> new_state) {
+    vector<int> int_vec;
+    for(auto &sta : new_state){
+        int_vec.push_back(stoi(sta));
+    }
+    sort(int_vec.begin(), int_vec.end());
+
+    for(int i = 0; i < int_vec.size(); i++){
+        new_state[i] = to_string(int_vec[i]);
+    }
+
     if (new_state.empty())
-        return "{}";
+        return "{0}";
 
     string name = "{" + new_state[0];
     for (int i = 1; i < new_state.size(); i++) {
@@ -277,8 +287,9 @@ DFA ENFA::toDFA() {
     subsetConstruction(startState);
 
     for (auto const &elem : allStates) {
-        if (elem == startState)
+        if (elem == startState){
             addState(vecToString(elem), true, accept(elem));
+        }
         else
             addState(vecToString(elem), false, accept(elem));
     }
@@ -300,11 +311,11 @@ ENFA ENFA::product(vector<ENFA> &enfas){
             {"type", "ENFA"},
             {"alphabet", {"", ""}},
             {"eps", enfas[0].eps},
-            {"states", {{{"name", "start"},
+            {"states", {{{"name", "1"},
                         {"starting", true},
                         {"accepting", false}},
 
-                        {{"name", "end"},
+                        {{"name", "2"},
                         {"starting", false},
                         {"accepting", true}}}},
              {"transitions", {"", ""}}
@@ -315,24 +326,26 @@ ENFA ENFA::product(vector<ENFA> &enfas){
             new_enfa["transitions"].push_back({{"from", sta["from"]}, {"to", sta["to"]}, {"input", sta["input"]}});
         }
         for(auto &sta : e.enfa["alphabet"]){
-            new_enfa["alphabet"].push_back(sta);
+            if (!std::count(new_enfa["alphabet"].begin(), new_enfa["alphabet"].end(), sta)) {
+                new_enfa["alphabet"].push_back(sta);
+            }
         }
         for(auto &sta : e.enfa["states"]){
             new_enfa["states"].push_back({{"name", sta["name"]}, {"starting", sta["starting"]}, {"accepting", sta["accepting"]}});
             if(sta["starting"] == true){
-                new_enfa["transitions"].push_back({{"to", sta["name"]}, {"from", "start"}, {"input", e.eps}});
+                new_enfa["transitions"].push_back({{"to", sta["name"]}, {"from", "1"}, {"input", e.eps}});
             }
             else if(sta["accepting"] == true){
-                new_enfa["transitions"].push_back({{"to", "end"}, {"from", sta["name"]}, {"input", e.eps}});
+                new_enfa["transitions"].push_back({{"to", "2"}, {"from", sta["name"]}, {"input", e.eps}});
             }
         }
     }
 
     for(auto &sta : new_enfa["states"]){
-        if(sta["name"] != "start"){
+        if(sta["name"] != "1"){
             sta["starting"] = false;
         }
-        if(sta["name"] != "end"){
+        if(sta["name"] != "2"){
             sta["accepting"] = false;
         }
     }
