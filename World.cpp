@@ -5,67 +5,92 @@
 #include "World.h"
 
 World::World(std::string path){
-    json info;
     std::ifstream input(path);
     input >> info;
-    makeWorld(info);
 }
 
-void World::makeWorld(json &info) {
+World::~World(){
+    for(auto &row : grid){
+        for(auto &elem : row){
+            delete elem;
+        }
+    }
+}
+
+void World::correctness() {
     for (json::iterator it = info.begin(); it != info.end(); ++it){
         Correctness::correctWorld(it);
     }
 }
 
-int World::getPopulatie() {
-    return populatie;
+void World::makeWorld() {
+    populateProperties();
+    populateGrid();
 }
 
-void World::setPopulatie(int pop) {
-    if (pop >= 0) {
-        populatie = pop;
-    } else {
-        std::cerr << "populatie kan niet negatief zijn\n";
+void World::populateGrid() {
+    int check = 0;
+
+    for(int i = 0; i < sqrt(populatie); i++){
+        vector<Mens*> row;
+        for(int i = 0; i < sqrt(populatie); i++){
+            row.push_back(Mens::generateHuman(gezondheidsgraad, bevolkingsdichtheid));
+
+            check++;
+            if (check >= populatie){
+                grid.push_back(row);
+                goto endLoop;
+            }
+        }
+        grid.push_back(row);
+    }
+    endLoop:
+    return;
+}
+
+void World::populateProperties() {
+    for (json::iterator it = info.begin(); it != info.end(); ++it){
+        if(it.key() == "agrens%"){
+            agrens = it.value();
+        }
+        else if(it.key() == "populatieN"){
+            populatie = it.value();
+        }
+        else if(it.key() == "bevolkingsdictheidN"){
+            bevolkingsdichtheid = it.value();
+        }
+        else if(it.key() == "gezondheidsgraadZ"){
+            gezondheidsgraad = it.value();
+        }
+        else if(it.key() == "agrens%"){
+            agrens = it.value();
+        }
+        else if(it.key() == "hgrens%"){
+            hgrens = it.value();
+        }
+        else if(it.key() == "zgrens%"){
+            zgrens = it.value();
+        }
     }
 }
 
-int World::getBevolkingsdichtheid() {
-    return bevolkingsdichtheid;
-}
-
-void World::setBevolkingsdichtheid(int bev) {
-    if (bev >= 0) {
-        bevolkingsdichtheid = bev;
-    } else {
-        std::cerr << "bevolkingsdichtheid kan niet negatief zijn\n";
+void World::print(){
+    for(auto &row : grid){
+        for(auto &human : row){
+            std::cout << human->toestand << "  -" << human->rightDistance << "-  ";
+        }
+        std::cout << std::endl;
+        for(auto &human : row){
+            std::cout << "|\t";
+        }
+        std::cout << std::endl;
+        for(auto &human : row){
+            std::cout << human->downDistance <<"\t";
+        }
+        std::cout << std::endl;
+        for(auto &human : row){
+            std::cout << "|\t";
+        }
+        std::cout << std::endl;
     }
 }
-
-double World::getGezondeidsgraad() {
-    return gezonheidsgraad;
-}
-
-void World::setGezondheidsgraad(double gez) {
-    if (gez >= 0.0) {
-        gezonheidsgraad = gez;
-    } else {
-        std::cerr << "gezonheidsgraad kan niet negatief zijn\n";
-    }
-}
-
-double World::getAgrens(){
-    return agrens;
-}
-
-void World::setAgrens(double ag) {
-    if (1.0 >= ag >= 0.0) {
-        agrens = ag;
-    } else {
-        std::cerr << "agrens has to be a number between 0.0 and 1.0\n";
-    }
-}
-
-World::World() {
-
-}
-

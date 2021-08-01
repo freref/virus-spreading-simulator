@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/VSS.dir/Automata.cpp.obj"
   "CMakeFiles/VSS.dir/Automata/Frederic/DFA.cpp.obj"
   "CMakeFiles/VSS.dir/Automata/Frederic/ENFA.cpp.obj"
   "CMakeFiles/VSS.dir/Automata/Frederic/NFA.cpp.obj"

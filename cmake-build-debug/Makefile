@@ -142,33 +142,6 @@ VSS/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\VSS.dir\build.make CMakeFiles/VSS.dir/build
 .PHONY : VSS/fast
 
-Automata.obj: Automata.cpp.obj
-
-.PHONY : Automata.obj
-
-# target to build an object file
-Automata.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\VSS.dir\build.make CMakeFiles/VSS.dir/Automata.cpp.obj
-.PHONY : Automata.cpp.obj
-
-Automata.i: Automata.cpp.i
-
-.PHONY : Automata.i
-
-# target to preprocess a source file
-Automata.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\VSS.dir\build.make CMakeFiles/VSS.dir/Automata.cpp.i
-.PHONY : Automata.cpp.i
-
-Automata.s: Automata.cpp.s
-
-.PHONY : Automata.s
-
-# target to generate assembly for a file
-Automata.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\VSS.dir\build.make CMakeFiles/VSS.dir/Automata.cpp.s
-.PHONY : Automata.cpp.s
-
 Automata/Frederic/DFA.obj: Automata/Frederic/DFA.cpp.obj
 
 .PHONY : Automata/Frederic/DFA.obj
@@ -475,9 +448,6 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... VSS
-	@echo ... Automata.obj
-	@echo ... Automata.i
-	@echo ... Automata.s
 	@echo ... Automata/Frederic/DFA.obj
 	@echo ... Automata/Frederic/DFA.i
 	@echo ... Automata/Frederic/DFA.s
