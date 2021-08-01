@@ -15,6 +15,43 @@ void Virus::correctness() {
     }
 }
 
+string Virus::calculateName() {
+    DFA a = virus.toDFA();
+    vector<string> alphabet = {"a","b","c","d","e","f",
+                               "g","h","i","j","k","l","m","n","o","p",
+                               "q","r","s","t","u","v","w","x","y","z"};
+    vector<string> ALPHABET = {
+            "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
+            "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"};
+    string r = a.toRE().regex;
+    string n = "";
+
+    for(int idx = 0; idx < r.size(); idx++){
+        char c = r[idx];
+        if(c == '+'){
+            n += ALPHABET[idx];
+        }
+        else if (c == '*'){
+            n += "-"+to_string(idx);
+        }
+        else if (c == '('){
+            n += "FrE";
+        }
+        else if (c == ')'){
+            n += "BeR";
+        }
+        else if (c == '.'){
+            n += "-";
+        }
+        else if (c != '0'){
+            int i = c - '0';
+            n += alphabet[i];
+        }
+    }
+
+    return n;
+}
+
 void Virus::makeVirus() {
     makeProperties();
 
@@ -22,7 +59,9 @@ void Virus::makeVirus() {
     for(auto &property : properties){
         p.push_back(property.second);
     }
-    ENFA virus = p[0].product(p);
+
+    virus = p[0].product(p);
+    name = calculateName();
 }
 
 void Virus::makeProperties() {
@@ -56,11 +95,11 @@ void Virus::rangeNFA(json::iterator &it, std::string &name, std::string &title){
     n["type"] = "ENFA";
     n["eps"] = "Q";
     n["alphabet"] = {to_string(c1), to_string(c2)};
-    n["states"] = {{{"name", "a"}, {"starting", true}, {"accepting", false}},
-                   {{"name", "b"}, {"starting", false}, {"accepting", false}},
-                   {{"name", "c"}, {"starting", false}, {"accepting", true}}};
-    n["transitions"] = {{{"from", "a"}, {"to", "b"}, {"input", to_string(c1)}},
-                        {{"from", "b"}, {"to", "c"}, {"input", to_string(c2)}}};
+    n["states"] = {{{"name", "3"}, {"starting", true}, {"accepting", false}},
+                   {{"name", "4"}, {"starting", false}, {"accepting", false}},
+                   {{"name", "5"}, {"starting", false}, {"accepting", true}}};
+    n["transitions"] = {{{"from", "3"}, {"to", "4"}, {"input", to_string(c1)}},
+                        {{"from", "4"}, {"to", "5"}, {"input", to_string(c2)}}};
 
     std::ofstream o(name);
     o << std::setw(4) << n << std::endl;
@@ -74,9 +113,9 @@ void Virus::integerNFA(json::iterator &it, std::string &name, std::string &title
     n["type"] = "ENFA";
     n["eps"] = "Q";
     n["alphabet"] = {to_string(integer)};
-    n["states"] = {{{"name", "a"}, {"starting", true}, {"accepting", false}},
-                   {{"name", "b"}, {"starting", false}, {"accepting", true}}};
-    n["transitions"] = {{{"from", "a"}, {"to", "b"}, {"input", to_string(integer)}}};
+    n["states"] = {{{"name", "3"}, {"starting", true}, {"accepting", false}},
+                   {{"name", "4"}, {"starting", false}, {"accepting", true}}};
+    n["transitions"] = {{{"from", "3"}, {"to", "4"}, {"input", to_string(integer)}}};
 
     std::ofstream o(name);
     o << std::setw(4) << n << std::endl;
@@ -91,11 +130,11 @@ void Virus::percentageNFA(json::iterator &it, std::string &name, std::string &ti
     n["type"] = "ENFA";
     n["eps"] = "Q";
     n["alphabet"] = {to_string(c1), to_string(c2)};
-    n["states"] = {{{"name", "a"}, {"starting", true}, {"accepting", false}},
-                   {{"name", "b"}, {"starting", false}, {"accepting", true}},
-                   {{"name", "c"}, {"starting", false}, {"accepting", false}}};
-    n["transitions"] = {{{"from", "a"}, {"to", "b"}, {"input", to_string(c1)}},
-                        {{"from", "a"}, {"to", "c"}, {"input", to_string(c2)}}};
+    n["states"] = {{{"name", "3"}, {"starting", true}, {"accepting", false}},
+                   {{"name", "4"}, {"starting", false}, {"accepting", true}},
+                   {{"name", "5"}, {"starting", false}, {"accepting", false}}};
+    n["transitions"] = {{{"from", "3"}, {"to", "4"}, {"input", to_string(c1)}},
+                        {{"from", "3"}, {"to", "5"}, {"input", to_string(c2)}}};
 
     std::ofstream o(name);
     o << std::setw(4) << n << std::endl;

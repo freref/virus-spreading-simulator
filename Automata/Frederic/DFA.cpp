@@ -292,7 +292,7 @@ void DFA::printTransitions(){
 //vindt de start transitions en voegt de transition blocks toe aan transitions
 void DFA::startTransitions() {
     vector<transition> trans;
-    for (auto tran : dfa["transitions"]) {
+    for (auto &tran : dfa["transitions"]) {
         transition t;
         t.from = tran["from"];
         t.to = tran["to"];
@@ -305,7 +305,7 @@ void DFA::startTransitions() {
 //zoekt alle niet accepterende en startende states
 void DFA::getStates(){
     vector<int> temp;
-    for(auto state : dfa["states"]){
+    for(auto &state : dfa["states"]){
         stateNames.push_back(state["name"]);
         if(state["accepting"])
             accepting[state["name"]]= true;
@@ -364,32 +364,39 @@ void DFA::sumEquals(){
  */
 string DFA::format(){
     string expression;
+
     for(auto const &name : stateNames){
         string R, S, U, T;
         if(!starting[name] && !sortedTransitions[name].empty()){
             for(auto const &transition : sortedTransitions[name]){
-                if(transition.to == transition.from)
+                if(transition.to == transition.from){
                     U = transition.expression;
-                else if (starting[transition.to])
+                }
+                else if (starting[transition.to]){
                     T = transition.expression;
+                }
             }
 
             for(auto const &transition : sortedTransitions["start"]){
-                if(transition.from == transition.to)
+                if(transition.from == transition.to){
                     R = transition.expression;
+                }
                 else if (transition.to == name){
                     S = transition.expression;
                 }
             }
-            if(!expression.empty())
+            if(!expression.empty()){
                 expression += "+";
-
-            if(R.empty() && T.empty())
+            }
+            if(R.empty() && T.empty()){
                 expression += S+U+"*";
-            else if (R.empty())
+            }
+            else if (R.empty()){
                 expression += "("+S+U+T+")"+"*"+S+U;
-            else
+            }
+            else{
                 expression += "("+R+"+"+S+U+T+")"+"*"+S+U;
+            }
         }
     }
     return expression;
@@ -416,19 +423,20 @@ RE DFA::toRE() {
     getStates();
     sumEquals();
 
-    for(auto state : s){
+    for(auto &state : s){
         string st = (state);
         removeState(st, findAddative(st));
         sumEquals();
     }
 
     for(auto const &transition : transitions.back()){
-        if(starting[transition.from])
+        if(starting[transition.from]){
             sortedTransitions["start"].push_back(transition);
-        else
+        }
+        else{
             sortedTransitions[transition.from].push_back(transition);
+        }
     }
-
     RE re(format(), 'e');
     return re;
 }

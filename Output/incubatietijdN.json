@@ -6,20 +6,20 @@
     "states": [
         {
             "accepting": false,
-            "name": "a",
+            "name": "3",
             "starting": true
         },
         {
             "accepting": true,
-            "name": "b",
+            "name": "4",
             "starting": false
         }
     ],
     "transitions": [
         {
-            "from": "a",
+            "from": "3",
             "input": "4.000000",
-            "to": "b"
+            "to": "4"
         }
     ],
     "type": "ENFA"

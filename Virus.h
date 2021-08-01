@@ -21,10 +21,13 @@ class Virus {
 public:
     json info;
     std::map<std::string, ENFA> properties;
-
+    int counter = 3;
+    string name;
+    ENFA virus;
 
     Virus();
     Virus(std::string path);
+    string calculateName();
     void makeProperties(json &info);
     DFA makeProperty(json::iterator::value_type chance);
     DFA makeDFA(int a, int b);
