@@ -80,12 +80,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Frederic/Documents/project/Automata.cpp">
-			<Option target="VSS"/>
-		</Unit>
-		<Unit filename="C:/Users/Frederic/Documents/project/Automata.h">
-			<Option target="VSS"/>
-		</Unit>
 		<Unit filename="C:/Users/Frederic/Documents/project/Automata/Frederic/DFA.cpp">
 			<Option target="VSS"/>
 		</Unit>
@@ -132,6 +126,9 @@
 			<Option target="VSS"/>
 		</Unit>
 		<Unit filename="C:/Users/Frederic/Documents/project/Statistiek.h">
+			<Option target="VSS"/>
+		</Unit>
+		<Unit filename="C:/Users/Frederic/Documents/project/Tools.h">
 			<Option target="VSS"/>
 		</Unit>
 		<Unit filename="C:/Users/Frederic/Documents/project/Virus.cpp">

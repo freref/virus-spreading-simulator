@@ -4,6 +4,5 @@
   "gezondheidsgraadZ": 1,
   "agrens%": 0.1,
   "zgrens%": 0.5,
-  "hgrens%": 0.8,
-  "sgrens%": 1
+  "hgrens%": 0.8
 }

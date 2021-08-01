@@ -6,7 +6,7 @@
 #define VSS_CORRECTNESS_H
 
 #include "json.hpp"
-#include "Automata.h"
+#include "Tools.h"
 
 using json = nlohmann::json;
 

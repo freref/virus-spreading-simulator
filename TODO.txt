@@ -18,3 +18,16 @@ WORLD:
     - sgrens: sterfte kleiner dan (TODO: overbodig)
 
 Bij working automaten opletten met char/double/string in alfabet
+
+
+
+
+
+------
+|dead|
+------
+
+healthy
+sick
+hosp
+dead

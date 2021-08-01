@@ -13,18 +13,11 @@
 
 class Simulatie {
 public:
-
-    Simulatie();
-
-    Simulatie(Virus &vir, World &wereld, bool mut);
-
     Virus virus;
     World world;
-    bool mutate;
-    unsigned int dag = 0;
-    std::vector<std::vector<Mens>> worldgrid;
-    void buildGrid();
-    void step();
+
+    Simulatie();
+    Simulatie(Virus &vir, World &wereld);
 };
 
 

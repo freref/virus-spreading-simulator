@@ -3,6 +3,8 @@ project(VSS)
 
 set(CMAKE_CXX_STANDARD 14)
 
+#add_compile_options(-Wall)
+
 add_executable(VSS main.cpp
         Automata/Frederic/DFA.cpp Automata/Frederic/DFA.h
         Automata/Frederic/ENFA.cpp Automata/Frederic/ENFA.h
@@ -21,4 +23,4 @@ add_executable(VSS main.cpp
         json.hpp Virus.cpp Virus.h Correctness.cpp
         Correctness.h World.cpp World.h Statistiek.cpp
         Statistiek.h Mens.cpp Mens.h Simulatie.cpp Simulatie.h
-        Automata.cpp Automata.h)
+        Tools.h)
