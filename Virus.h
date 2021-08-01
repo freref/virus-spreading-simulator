@@ -14,6 +14,7 @@
 #include "Automata/Frederic/ENFA.h"
 #include "Correctness.h"
 #include <iomanip>
+#include "Tools.h"
 
 using json = nlohmann::json;
 
@@ -25,8 +26,9 @@ public:
     string name;
     ENFA virus;
 
-    Virus();
+    Virus(){};
     Virus(std::string path);
+
     string calculateName();
     void makeProperties(json &info);
     DFA makeProperty(json::iterator::value_type chance);
@@ -36,11 +38,8 @@ public:
     void makeProperties();
     void makeProperty(json::iterator it);
     void rangeNFA(json::iterator &it, std::string &name, std::string &title);
-    void integerNFA(json::iterator &it, std::string &name, std::string &title);
+    void booleanNFA(json::iterator &it, std::string &name, std::string &title);
     void percentageNFA(json::iterator &it, std::string &name, std::string &title);
-
-    std::string giveName();
-    void muteer();
 };
 
 

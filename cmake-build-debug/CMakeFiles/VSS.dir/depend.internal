@@ -38,9 +38,11 @@ CMakeFiles/VSS.dir/Mens.cpp.obj
  C:/Users/Frederic/Documents/project/Automata/Frederic/DFA.h
  C:/Users/Frederic/Documents/project/Automata/Frederic/ENFA.h
  C:/Users/Frederic/Documents/project/Automata/Frederic/RE.h
+ C:/Users/Frederic/Documents/project/Correctness.h
  C:/Users/Frederic/Documents/project/Mens.cpp
  C:/Users/Frederic/Documents/project/Mens.h
  C:/Users/Frederic/Documents/project/Tools.h
+ C:/Users/Frederic/Documents/project/Virus.h
  C:/Users/Frederic/Documents/project/json.hpp
 CMakeFiles/VSS.dir/Simulatie.cpp.obj
  C:/Users/Frederic/Documents/project/Automata/Frederic/DFA.h
@@ -73,6 +75,7 @@ CMakeFiles/VSS.dir/World.cpp.obj
  C:/Users/Frederic/Documents/project/Correctness.h
  C:/Users/Frederic/Documents/project/Mens.h
  C:/Users/Frederic/Documents/project/Tools.h
+ C:/Users/Frederic/Documents/project/Virus.h
  C:/Users/Frederic/Documents/project/World.cpp
  C:/Users/Frederic/Documents/project/World.h
  C:/Users/Frederic/Documents/project/json.hpp

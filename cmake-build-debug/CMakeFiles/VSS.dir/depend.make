@@ -37,9 +37,11 @@ CMakeFiles/VSS.dir/Correctness.cpp.obj: ../json.hpp
 CMakeFiles/VSS.dir/Mens.cpp.obj: ../Automata/Frederic/DFA.h
 CMakeFiles/VSS.dir/Mens.cpp.obj: ../Automata/Frederic/ENFA.h
 CMakeFiles/VSS.dir/Mens.cpp.obj: ../Automata/Frederic/RE.h
+CMakeFiles/VSS.dir/Mens.cpp.obj: ../Correctness.h
 CMakeFiles/VSS.dir/Mens.cpp.obj: ../Mens.cpp
 CMakeFiles/VSS.dir/Mens.cpp.obj: ../Mens.h
 CMakeFiles/VSS.dir/Mens.cpp.obj: ../Tools.h
+CMakeFiles/VSS.dir/Mens.cpp.obj: ../Virus.h
 CMakeFiles/VSS.dir/Mens.cpp.obj: ../json.hpp
 
 CMakeFiles/VSS.dir/Simulatie.cpp.obj: ../Automata/Frederic/DFA.h
@@ -72,6 +74,7 @@ CMakeFiles/VSS.dir/World.cpp.obj: ../Automata/Frederic/RE.h
 CMakeFiles/VSS.dir/World.cpp.obj: ../Correctness.h
 CMakeFiles/VSS.dir/World.cpp.obj: ../Mens.h
 CMakeFiles/VSS.dir/World.cpp.obj: ../Tools.h
+CMakeFiles/VSS.dir/World.cpp.obj: ../Virus.h
 CMakeFiles/VSS.dir/World.cpp.obj: ../World.cpp
 CMakeFiles/VSS.dir/World.cpp.obj: ../World.h
 CMakeFiles/VSS.dir/World.cpp.obj: ../json.hpp

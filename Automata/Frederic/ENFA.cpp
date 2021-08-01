@@ -34,8 +34,9 @@ void ENFA::nextNodes(vector<int> *nodes, string input) {
     for (auto const &node : *nodes) {
         for (auto const &transition : enfa["transitions"]) {
             if (transition["from"] == node && transition["input"] == input &&
-                count(new_states.begin(), new_states.end(), transition["to"]) == 0)
+                count(new_states.begin(), new_states.end(), transition["to"]) == 0){
                 new_states.push_back(transition["to"]);
+            }
         }
     }
     *nodes = new_states;
@@ -300,10 +301,12 @@ DFA ENFA::toDFA() {
     dfa["transitions"].erase(dfa["transitions"].begin());
     dfa["transitions"].erase(dfa["transitions"].begin());
 
-    ofstream file(path + ".2DFA.json");
+    string st = path.substr(0, path.size()-5);
+
+    ofstream file(st + "2DFA.json");
     file << dfa;
     file.close();
-    return DFA(path + ".2DFA.json");
+    return DFA(st + "2DFA.json");
 }
 
 ENFA ENFA::product(vector<ENFA> &enfas){
@@ -360,4 +363,16 @@ ENFA ENFA::product(vector<ENFA> &enfas){
     file.close();
     counter++;
     return ENFA("../Output/virus"+to_string(counter-1)+".json");
+}
+
+bool ENFA::smallerAccept(double input) {
+    std::cout << input << std::endl;
+    for (auto const &elem : enfa["alphabet"]) {
+        if(input < stod(string(elem))){
+            if(this->accepts(elem)){
+                return true;
+            }
+        }
+    }
+    return false;
 }
