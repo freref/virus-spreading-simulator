@@ -20,16 +20,6 @@ set
 map
 -
 
-C:/Users/Frederic/Documents/project/Automata/Frederic/ENFA.cpp
-ENFA.h
-C:/Users/Frederic/Documents/project/Automata/Frederic/ENFA.h
-../../json.hpp
-C:/Users/Frederic/Documents/project/json.hpp
-fstream
--
-map
--
-
 C:/Users/Frederic/Documents/project/Automata/Frederic/ENFA.h
 string
 -
@@ -56,6 +46,38 @@ C:/Users/Frederic/Documents/project/json.hpp
 Tools.h
 C:/Users/Frederic/Documents/project/Tools.h
 
+C:/Users/Frederic/Documents/project/Mens.h
+string
+-
+iostream
+-
+cmath
+-
+Tools.h
+C:/Users/Frederic/Documents/project/Tools.h
+Virus.h
+C:/Users/Frederic/Documents/project/Virus.h
+fstream
+C:/Users/Frederic/Documents/project/fstream
+
+C:/Users/Frederic/Documents/project/Simulatie.cpp
+Simulatie.h
+C:/Users/Frederic/Documents/project/Simulatie.h
+
+C:/Users/Frederic/Documents/project/Simulatie.h
+Virus.h
+C:/Users/Frederic/Documents/project/Virus.h
+World.h
+C:/Users/Frederic/Documents/project/World.h
+Mens.h
+C:/Users/Frederic/Documents/project/Mens.h
+vector
+-
+array
+-
+Tools.h
+C:/Users/Frederic/Documents/project/Tools.h
+
 C:/Users/Frederic/Documents/project/Tools.h
 Automata/Frederic/RE.h
 C:/Users/Frederic/Documents/project/Automata/Frederic/RE.h
@@ -63,10 +85,6 @@ chrono
 -
 random
 -
-
-C:/Users/Frederic/Documents/project/Virus.cpp
-Virus.h
-C:/Users/Frederic/Documents/project/Virus.h
 
 C:/Users/Frederic/Documents/project/Virus.h
 fstream
@@ -89,6 +107,18 @@ iomanip
 -
 Tools.h
 C:/Users/Frederic/Documents/project/Tools.h
+
+C:/Users/Frederic/Documents/project/World.h
+json.hpp
+C:/Users/Frederic/Documents/project/json.hpp
+Mens.h
+C:/Users/Frederic/Documents/project/Mens.h
+Correctness.h
+C:/Users/Frederic/Documents/project/Correctness.h
+fstream
+-
+ostream
+-
 
 C:/Users/Frederic/Documents/project/json.hpp
 algorithm

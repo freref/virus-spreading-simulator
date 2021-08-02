@@ -9,6 +9,7 @@ using json = nlohmann::json;
 
 
 int main() {
+
     std::string virus = "Virus/virus1.json";
     std::string world = "World/world1.json";
 

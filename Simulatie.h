@@ -25,6 +25,7 @@ public:
     void simulate(int n);
     void breakout(Mens* m);
     void spread(Mens* m);
+    void muteer();
 };
 
 

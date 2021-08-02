@@ -33,6 +33,7 @@ public:
     RE(string r, char e);
 
     ENFA toENFA();
+    ENFA toENFA(string path);
     void addTransition(int from, int to, string input);
     void sum(block* R, block* S);
     void concat(block* R, block* S);

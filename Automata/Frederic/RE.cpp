@@ -356,6 +356,33 @@ ENFA RE::toENFA() {
     return enfa;
 }
 
+ENFA RE::toENFA(string path) {
+    int end = calculateOperations(regex) - 1;
+    renfa = {{"type",        "ENFA"},
+             {"eps",         eps},
+             {"transitions", {"", ""}},
+             {"alphabet",    {"", ""}},
+             {"states",      {{{"name", 0}, {"starting", true}, {"accepting", false}},
+                                  {{"name", end}, {"starting", false}, {"accepting", true}}}}};
+
+    block start = {0, end, regex};
+
+    buildStates(end);
+    findTransitions(start);
+    buildTransitions();
+    buildAlph();
+
+    renfa["alphabet"].erase(renfa["alphabet"].begin());
+    renfa["alphabet"].erase(renfa["alphabet"].begin());
+    renfa["transitions"].erase(renfa["transitions"].begin());
+    renfa["transitions"].erase(renfa["transitions"].begin());
+    ofstream file(path);
+    file << renfa;
+    file.close();
+    ENFA enfa(path);
+    return enfa;
+}
+
 // print de reguliere expressie
 void RE::print(){
     cout << regex;

@@ -154,7 +154,7 @@ bool ENFA::accept(vector<string> new_state) {
 string ENFA::vecToString(vector<string> new_state) {
     vector<int> int_vec;
     for(auto &sta : new_state){
-        int_vec.push_back(stoi(sta));
+        int_vec.push_back(stoi(string(sta)));
     }
     sort(int_vec.begin(), int_vec.end());
 
@@ -231,7 +231,7 @@ vector<string> ENFA::tryEpsilon(vector<string> state1) {
 
     for (auto transition : enfa["transitions"]) {
         if (count(state1.begin(), state1.end(), transition["from"]) && transition["input"] == eps)
-            new_state.push_back(transition["to"]);
+            new_state.push_back(to_string(transition["to"]));
     }
     sort(new_state.begin(), new_state.end());
     new_state.erase(unique(new_state.begin(), new_state.end()), new_state.end());

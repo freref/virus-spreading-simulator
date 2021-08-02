@@ -9,12 +9,17 @@ Simulatie::Simulatie(Virus& vir, World& wereld) {
     world = wereld;
 }
 
+void Simulatie::muteer(){
+    double r = generator() / generator.max();
+}
+
 void Simulatie::infect(int x, int y) {
     Mens* m = world.grid[x][y];
     string i_string = (virus.properties["infectieN"].enfa["alphabet"][0]);
     double i = stod(i_string);
 
     if(m->infectie < i && m->toestand == "G"){
+        muteer();
         m->toestand = "I";
         m->it = it;
         m->infectie++;
@@ -23,8 +28,7 @@ void Simulatie::infect(int x, int y) {
 }
 
 void Simulatie::spread(Mens* human){
-    if((human->toestand == "Z" || human->toestand == "H" || (human->toestand == "A" || human->toestand == "I") && virus.properties["asymptomatischB"].accepts("1"))){
-        std::cout << "spread inside" << std::endl;
+    if(virus.properties["asymptomatischB"].accepts(human->toestand)){
         if(it - human->it == human->leftDistance){
             infect(human->n.left.first, human->n.left.second);
         }

@@ -75,7 +75,7 @@ void Virus::makeProperties() {
 }
 
 void Virus::makeProperty(json::iterator it) {
-    std::string name = "../Output/"+it.key()+".json";
+    std::string name = "../Output/Virus/"+it.key()+".json";
     std::string title = it.key();
 
     if(integersKeyENFA.accepts(it.key()) || percentageKeyENFA.accepts(it.key())){
@@ -99,11 +99,11 @@ void Virus::rangeNFA(json::iterator &it, std::string &name, std::string &title){
     n["type"] = "ENFA";
     n["eps"] = "Q";
     n["alphabet"] = {to_string(c1), to_string(c2)};
-    n["states"] = {{{"name", "0"}, {"starting", true}, {"accepting", false}},
-                   {{"name", "1"}, {"starting", false}, {"accepting", false}},
-                   {{"name", "2"}, {"starting", false}, {"accepting", true}}};
-    n["transitions"] = {{{"from", "0"}, {"to", "1"}, {"input", to_string(c1)}},
-                        {{"from", "1"}, {"to", "2"}, {"input", to_string(c2)}}};
+    n["states"] = {{{"name", 0}, {"starting", true}, {"accepting", false}},
+                   {{"name", 1}, {"starting", false}, {"accepting", false}},
+                   {{"name", 2}, {"starting", false}, {"accepting", true}}};
+    n["transitions"] = {{{"from", 0}, {"to", 1}, {"input", to_string(c1)}},
+                        {{"from", 1}, {"to", 2}, {"input", to_string(c2)}}};
 
     std::ofstream o(name);
     o << std::setw(4) << n << std::endl;
@@ -113,16 +113,10 @@ void Virus::rangeNFA(json::iterator &it, std::string &name, std::string &title){
 void Virus::booleanNFA(json::iterator &it, std::string &name, std::string &title) {
     int integer = it.value().get<int>();
 
-    json n;
-    n["type"] = "ENFA";
-    n["eps"] = "Q";
-    n["alphabet"] = {to_string(integer)};
-    n["states"] = {{{"name", "0"}, {"starting", true}, {"accepting", false}},
-                   {{"name", "1"}, {"starting", false}, {"accepting", true}}};
-    n["transitions"] = {{{"from", "0"}, {"to", "1"}, {"input", to_string(integer)}}};
-
-    std::ofstream o(name);
-    o << std::setw(4) << n << std::endl;
+    if(integer == 1)
+        RE("A+I+Z+H", 'Q').toENFA(name);
+    else
+        RE("Z+H", 'Q').toENFA(name);
 }
 
 
@@ -133,9 +127,9 @@ void Virus::percentageNFA(json::iterator &it, std::string &name, std::string &ti
     n["type"] = "ENFA";
     n["eps"] = "Q";
     n["alphabet"] = {to_string(c1)};
-    n["states"] = {{{"name", "0"}, {"starting", true}, {"accepting", false}},
-                   {{"name", "1"}, {"starting", false}, {"accepting", true}}};
-    n["transitions"] = {{{"from", "0"}, {"to", "1"}, {"input", to_string(c1)}}};
+    n["states"] = {{{"name", 0}, {"starting", true}, {"accepting", false}},
+                   {{"name", 1}, {"starting", false}, {"accepting", true}}};
+    n["transitions"] = {{{"from", 0}, {"to", 1}, {"input", to_string(c1)}}};
 
     std::ofstream o(name);
     o << std::setw(4) << n << std::endl;
