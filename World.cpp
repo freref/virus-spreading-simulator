@@ -18,22 +18,26 @@ World::~World(){
 }
 
 void World::correctness() {
+    std::cout << "Correctheid van de wereld aan het controleren..." << std::endl;
     for (json::iterator it = info.begin(); it != info.end(); ++it){
         Correctness::correctWorld(it);
     }
+    cout << string(50, '\n');
 }
 
 void World::makeWorld() {
+    std::cout << "Wereld aan het maken..." << std::endl;
     populateProperties();
     populateGrid();
+    cout << string(50, '\n');
 }
 
 void World::populateGrid() {
     int check = 0;
 
-    for(int i = 0; i < sqrt(populatie); i++){
+    for(int x = 0; x < sqrt(populatie); x++){
         vector<Mens*> row;
-        for(int i = 0; i < sqrt(populatie); i++){
+        for(int y = 0; y < sqrt(populatie); y++){
             row.push_back(Mens::generateHuman(gezondheidsgraad, bevolkingsdichtheid));
 
             check++;
@@ -45,6 +49,41 @@ void World::populateGrid() {
         grid.push_back(row);
     }
     endLoop:
+
+    for(int y = 0; y < grid.size(); y++){
+        for(int x = 0; x < grid[y].size(); x++){
+            int minus_x_coord = x-1;
+            int minus_y_coord = y-1;
+
+            int plus_x_coord = x+1;
+            int plus_y_coord = y+1;
+
+            if(minus_x_coord < 0){
+                minus_x_coord = grid[y].size()-1;
+            }
+
+            if(minus_y_coord < 0){
+                minus_y_coord = grid.size()-1;
+            }
+
+            if(plus_y_coord > grid.size()-1){
+                plus_y_coord = 0;
+            }
+
+            if(plus_x_coord > grid[y].size()-1){
+                plus_x_coord = 0;
+            }
+
+            grid[y][x]->leftDistance = grid[y][minus_x_coord]->rightDistance;
+            grid[y][x]->upDistance = grid[minus_y_coord][x]->downDistance;
+
+            grid[y][x]->n.left = pair<int, int>{y, minus_x_coord};
+            grid[y][x]->n.up = pair<int, int>{minus_y_coord, x};
+            grid[y][x]->n.down = pair<int, int>{plus_y_coord, x};
+            grid[y][x]->n.right = pair<int, int>{y, plus_x_coord};
+        }
+    }
+
     return;
 }
 
@@ -75,6 +114,7 @@ void World::populateProperties() {
 }
 
 void World::print(){
+    std::cout << std::endl;
     for(auto &row : grid){
         for(auto &human : row){
             std::cout << human->toestand << "  -" << human->rightDistance << "-  ";

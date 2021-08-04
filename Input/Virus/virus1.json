@@ -1,10 +1,1 @@
-{
-  "besmettingsgraad%": 0.5,
-  "sterftegraad%": 0.02,
-  "incubatietijdN": 4,
-  "ziekte%": 0.5,
-  "incubatieB": 1,
-  "asymptomatischB": 0,
-  "mutatie%": 0.10,
-  "mutatieR": [0.05, 1]
-}
+{"asymptomatischB":1,"incubatietijdN":9,"infectieN":3,"mutatie%":1.1384231688853814,"mutatieR":[0.05,0.15],"recoveryN":7,"ziekte%":0.5495056354577335}

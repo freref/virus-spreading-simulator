@@ -19,6 +19,11 @@ WORLD:
 
 Bij working automaten opletten met char/double/string in alfabet
 
+recovery is aantal dagen het duurt om te genezen na ziek te zijn
+
+infectie is het aantal keer dat je geinfecteerd moet geweest zijn om antilichamen te hebben
+
+ziekte% multiplicator op health (hoe hoger hoe dodelijker)
 
 
 
