@@ -231,7 +231,7 @@ vector<string> ENFA::tryEpsilon(vector<string> state1) {
 
     for (auto transition : enfa["transitions"]) {
         if (count(state1.begin(), state1.end(), transition["from"]) && transition["input"] == eps)
-            new_state.push_back(to_string(transition["to"]));
+            new_state.push_back((transition["to"]));
     }
     sort(new_state.begin(), new_state.end());
     new_state.erase(unique(new_state.begin(), new_state.end()), new_state.end());
@@ -279,7 +279,7 @@ DFA ENFA::toDFA() {
 
     for (int i = 0; i < enfa["states"].size(); i++) {
         if (enfa["states"][i]["starting"] == true) {
-            startState = {enfa["states"][i]["name"]};
+            startState = {(enfa["states"][i]["name"])};
             startState = tryEpsilon(startState);
             dfa["states"] = {"", ""};
         }
@@ -309,16 +309,16 @@ DFA ENFA::toDFA() {
     return DFA(st + "2DFA.json");
 }
 
-ENFA ENFA::product(vector<ENFA> &enfas){
+ENFA ENFA::product(vector<ENFA> &enfas, int counter){
     json new_enfa = {
             {"type", "ENFA"},
             {"alphabet", {"", ""}},
             {"eps", enfas[0].eps},
-            {"states", {{{"name", "1"},
+            {"states", {{{"name", "3"},
                         {"starting", true},
                         {"accepting", false}},
 
-                        {{"name", "2"},
+                        {{"name", "4"},
                         {"starting", false},
                         {"accepting", true}}}},
              {"transitions", {"", ""}}
@@ -336,19 +336,19 @@ ENFA ENFA::product(vector<ENFA> &enfas){
         for(auto &sta : e.enfa["states"]){
             new_enfa["states"].push_back({{"name", sta["name"]}, {"starting", sta["starting"]}, {"accepting", sta["accepting"]}});
             if(sta["starting"] == true){
-                new_enfa["transitions"].push_back({{"to", sta["name"]}, {"from", "1"}, {"input", e.eps}});
+                new_enfa["transitions"].push_back({{"to", sta["name"]}, {"from", "3"}, {"input", e.eps}});
             }
             else if(sta["accepting"] == true){
-                new_enfa["transitions"].push_back({{"to", "2"}, {"from", sta["name"]}, {"input", e.eps}});
+                new_enfa["transitions"].push_back({{"to", "4"}, {"from", sta["name"]}, {"input", e.eps}});
             }
         }
     }
 
     for(auto &sta : new_enfa["states"]){
-        if(sta["name"] != "1"){
+        if(sta["name"] != "3"){
             sta["starting"] = false;
         }
-        if(sta["name"] != "2"){
+        if(sta["name"] != "4"){
             sta["accepting"] = false;
         }
     }
@@ -361,14 +361,13 @@ ENFA ENFA::product(vector<ENFA> &enfas){
     ofstream file("../Output/virus"+to_string(counter)+".json");
     file << new_enfa;
     file.close();
-    counter++;
-    return ENFA("../Output/virus"+to_string(counter-1)+".json");
+    return ENFA("../Output/virus"+to_string(counter)+".json");
 }
 
 bool ENFA::smallerAccept(double input) {
-    std::cout << input << std::endl;
     for (auto const &elem : enfa["alphabet"]) {
         if(input < stod(string(elem))){
+            std::cout << elem << std::endl;
             if(this->accepts(elem)){
                 return true;
             }

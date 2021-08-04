@@ -17,6 +17,7 @@ public:
     Virus virus;
     World world;
     int it = 0;
+    int counter = 1;
 
     Simulatie();
     Simulatie(Virus &vir, World &wereld);

@@ -10,7 +10,71 @@ Simulatie::Simulatie(Virus& vir, World& wereld) {
 }
 
 void Simulatie::muteer(){
-    double r = generator() / generator.max();
+    string m_string = (virus.properties["mutatie%"].enfa["alphabet"][0]);
+    string range1 = (virus.properties["mutatieR"].enfa["alphabet"][0]);
+    string range2 = (virus.properties["mutatieR"].enfa["alphabet"][1]);
+
+    double r = (generator()*1.0) / (generator.max() * 1.0);
+    double m = stod(m_string);
+    vector<double> range = {stod(range1), stod(range2)};
+    sort(range.begin(), range.end());
+
+    vector<string> options = {"incubatietijdN",
+                              "recoveryN",
+                              "infectieN",
+                              "ziekte%",
+                              "asymptomatischB",
+                              "mutatie%"};
+
+    if(r < m){
+        double lower_bound = range[0];
+        double upper_bound = range[1];
+        std::uniform_real_distribution<double> unif(lower_bound,upper_bound);
+        double a_random_double = unif(generator)+1;
+
+        json info;
+        ifstream input("Virus/virus1.json");
+        input >> info;
+
+        string selected = options[generator()%options.size()];
+        int bi = generator()%2;
+
+        if(integersKeyENFA.accepts(selected)){
+            int integer;
+
+            if(bi == 0)
+                integer = ceil(double(info[selected]) * a_random_double);
+            else
+                integer = floor(double(info[selected]) / a_random_double);
+
+            info[selected] = integer;
+        }
+        else if(questionKeyENFA.accepts(selected)){
+            if(info[selected].get<int>() == 1){
+                info[selected] = 0;
+            }
+            else{
+                info[selected] = 1;
+            }
+        }
+        else if (percentageKeyENFA.accepts(selected)){
+            if(bi == 0){
+                info[selected] = (double(info[selected]) * a_random_double);
+            }
+            else{
+                info[selected] = (double(info[selected]) / a_random_double);
+            }
+        }
+
+        if(info[selected] <= 0 && !questionKeyENFA.accepts(selected))
+            info[selected] = 0.01;
+
+        ofstream output("Virus/virus1.json");
+        output << info;
+        virus.reload(info);
+        virus.makeVirus(counter);
+        counter++;
+    }
 }
 
 void Simulatie::infect(int x, int y) {

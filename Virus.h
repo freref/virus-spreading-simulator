@@ -22,9 +22,9 @@ class Virus {
 public:
     json info;
     std::map<std::string, ENFA> properties;
-    int counter = 3;
     string name;
-    ENFA virus;
+    ENFA virus_enfa;
+    DFA virus_dfa;
 
     Virus(){};
     Virus(std::string path);
@@ -34,12 +34,13 @@ public:
     DFA makeProperty(json::iterator::value_type chance);
     DFA makeDFA(int a, int b);
     void correctness();
-    void makeVirus();
+    void makeVirus(int counter);
     void makeProperties();
     void makeProperty(json::iterator it);
     void rangeNFA(json::iterator &it, std::string &name, std::string &title);
     void booleanNFA(json::iterator &it, std::string &name, std::string &title);
     void percentageNFA(json::iterator &it, std::string &name, std::string &title);
+    void reload(json j);
 };
 
 

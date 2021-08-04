@@ -440,7 +440,6 @@ RE DFA::toRE() {
     RE re(format(), 'e');
     return re;
 }
-//      (f(d)*f+d(d+f(d)*f))(f+d)*
 
 //zoekt de start kruisjes (waar een accepterend state is)
 bool DFA::startingX(){

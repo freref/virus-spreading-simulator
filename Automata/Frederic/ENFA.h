@@ -23,7 +23,6 @@ public:
     string eps;
     set<vector<string>> allStates;
     vector<int> triedNodes;
-    int counter = 0;
 
     explicit ENFA(string p);
     ENFA(){};
@@ -42,7 +41,7 @@ public:
     bool accepts(string input);
     void nextNodes(vector<int>* node, string input);
     void tryEps(vector<int> &nodes);
-    ENFA product(vector<ENFA> &enfas);
+    ENFA product(vector<ENFA> &enfas, int counter);
     bool smallerAccept(double input);
 };
 

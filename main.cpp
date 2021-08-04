@@ -15,7 +15,7 @@ int main() {
 
     Virus v(virus);
     //v.correctness();
-    v.makeVirus();
+    v.makeVirus(0);
 
     World w(world);
     //w.correctness();
