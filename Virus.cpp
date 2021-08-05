@@ -14,7 +14,6 @@ void Virus::reload(json j) {
 }
 
 void Virus::correctness() {
-    std::cout << "Correctheid van het virus aan het controleren..." << std::endl;
     for (json::iterator it = info.begin(); it != info.end(); ++it){
         Correctness::correctVirus(it);
     }

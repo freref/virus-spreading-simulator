@@ -139,6 +139,26 @@ void Simulatie::simulate(int n){
     }
 }
 
+bool Simulatie::autoSimulate(){
+    bool check = true;
+    for(auto &row : world.grid){
+        for(auto &human : row){
+            if(human->toestand != "G" && human->toestand != "X"){
+                check = false;
+                if(it - human->it == human->incubatie + human->recovery){
+                    human->toestand = "G";
+                }
+                if(it - human->it == human->incubatie){
+                    breakout(human);
+                }
+                spread(human);
+            }
+        }
+    }
+    it++;
+    return check;
+}
+
 void Simulatie::breakout(Mens *m) {
     string z_string = (virus.properties["ziekte%"].enfa["alphabet"][0]);
     double z = stod(z_string);

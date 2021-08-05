@@ -46,7 +46,7 @@ public:
 
     static Mens* generateHuman(double gg, double d);
     void calculateValues(Virus &v);
-    void print();
+    string print();
 };
 
 #endif //VSS_MENS_H

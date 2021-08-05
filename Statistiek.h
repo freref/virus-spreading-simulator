@@ -12,13 +12,9 @@
 
 class Statistiek {
 public:
-    string log;
 
     Statistiek(){};
 
-    void add(std::string line);
-    void update(World w);
-    void print();
 };
 
 #endif //VSS_STATISTIEK_H

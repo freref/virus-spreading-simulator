@@ -18,18 +18,14 @@ World::~World(){
 }
 
 void World::correctness() {
-    std::cout << "Correctheid van de wereld aan het controleren..." << std::endl;
     for (json::iterator it = info.begin(); it != info.end(); ++it){
         Correctness::correctWorld(it);
     }
-    cout << string(50, '\n');
 }
 
 void World::makeWorld() {
-    std::cout << "Wereld aan het maken..." << std::endl;
     populateProperties();
     populateGrid();
-    cout << string(50, '\n');
 }
 
 void World::populateGrid() {
@@ -64,13 +60,15 @@ void World::populateGrid() {
 
             if(minus_y_coord < 0){
                 minus_y_coord = grid.size()-1;
+                if(x >= grid[minus_y_coord].size())
+                    minus_y_coord--;
             }
 
-            if(plus_y_coord > grid.size()-1){
+            if(plus_y_coord >= grid.size()){
                 plus_y_coord = 0;
             }
 
-            if(plus_x_coord > grid[y].size()-1){
+            if(plus_x_coord >= grid[y].size()){
                 plus_x_coord = 0;
             }
 
