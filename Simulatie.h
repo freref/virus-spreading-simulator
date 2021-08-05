@@ -11,9 +11,11 @@
 #include <vector>
 #include <array>
 #include "Tools.h"
+#include "Statistiek.h"
 
 class Simulatie {
 public:
+    Statistiek log;
     Virus virus;
     World world;
     int it = 0;
@@ -27,6 +29,7 @@ public:
     void breakout(Mens* m);
     void spread(Mens* m);
     void muteer();
+    bool confirmMutation();
 };
 
 

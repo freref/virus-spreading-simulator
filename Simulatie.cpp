@@ -7,6 +7,7 @@
 Simulatie::Simulatie(Virus& vir, World& wereld) {
     virus = vir;
     world = wereld;
+    log = Statistiek();
 }
 
 void Simulatie::muteer(){
@@ -74,7 +75,18 @@ void Simulatie::muteer(){
         virus.reload(info);
         virus.makeVirus(counter);
         counter++;
+        confirmMutation();
     }
+}
+
+bool Simulatie::confirmMutation() {
+    if(counter == 1)
+        return false;
+
+    DFA a = DFA("../Output/virus"+to_string(counter-1)+".json").minimize();
+    DFA b = DFA("../Output/virus"+to_string(counter-2)+".json").minimize();
+
+    return (!(a==b));
 }
 
 void Simulatie::infect(int x, int y) {
@@ -92,17 +104,17 @@ void Simulatie::infect(int x, int y) {
 }
 
 void Simulatie::spread(Mens* human){
-    if(virus.properties["asymptomatischB"].accepts(human->toestand)){
-        if(it - human->it == human->leftDistance){
+    if(ENFA("../Output/Virus/besmettelijk.json").accepts(human->toestand)){
+        if(it - human->it >= human->leftDistance){
             infect(human->n.left.first, human->n.left.second);
         }
-        if(it - human->it == human->rightDistance){
+        if(it - human->it >= human->rightDistance){
             infect(human->n.right.first, human->n.right.second);
         }
-        if(it - human->it == human->upDistance){
+        if(it - human->it >= human->upDistance){
             infect(human->n.up.first, human->n.up.second);
         }
-        if(it - human->it == human->downDistance){
+        if(it - human->it >= human->downDistance){
             infect(human->n.down.first, human->n.down.second);
         }
     }
@@ -119,7 +131,6 @@ void Simulatie::simulate(int n){
                     if(it - human->it == human->incubatie){
                         breakout(human);
                     }
-
                     spread(human);
                 }
             }
