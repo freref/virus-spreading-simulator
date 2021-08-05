@@ -31,7 +31,8 @@ int main() {
                  "'infecteer' infecteert een gegeven persson op rij x en plaats y, \n"
                  "'mens' geeft de toestand van een persoon weer, \n"
                  "'virus' geeft de naam van het huidig virus weer, \n"
-                 "'exit' stopt het programma.\n";
+                 "'exit' stopt het programma.\n"
+                 "'log' print de log \n";
     std::string input;
     std::cout << "> ";
     std::getline(std::cin, input);
@@ -39,6 +40,9 @@ int main() {
     while (input != "exit") {
         if(input == "print"){
             sim.world.print();
+        }
+        else if(input == "log"){
+            sim.log.print();
         }
         else if (input == "infecteer"){
             string x;
@@ -56,7 +60,6 @@ int main() {
             sim.simulate(stoi(step));
         }
         else if (input  == "virus") {
-            sim.virus.calculateName();
             std::cout << "Virus naam: " <<sim.virus.name << std::endl;
         }
         else if (input == "mens"){

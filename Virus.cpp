@@ -28,8 +28,11 @@ string Virus::calculateName() {
             "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
             "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"};
     string r = virus_dfa.toRE().regex;
-
     string n = "";
+
+    for(auto &alph : virus_enfa.enfa["alphabet"]){
+        r += alph;
+    }
 
     for(int idx = 0; idx < r.size(); idx++){
         char c = r[idx];
@@ -57,12 +60,10 @@ string Virus::calculateName() {
             n += alphabet[i];
         }
     }
-
     return n;
 }
 
 void Virus::makeVirus(int counter) {
-    std::cout << "Virus aan het maken..." << std::endl;
     makeProperties();
 
     vector<ENFA> p;
@@ -73,7 +74,6 @@ void Virus::makeVirus(int counter) {
     virus_enfa = p[0].product(p, counter);
     virus_dfa = virus_enfa.toDFA();
     name = calculateName();
-    cout << string(50, '\n');
 }
 
 void Virus::makeProperties() {
@@ -90,7 +90,9 @@ void Virus::makeProperty(json::iterator it) {
         percentageNFA(it, name, title);
     }
     else if(questionKeyENFA.accepts(it.key())){
-        booleanNFA(it, name, title);
+        string b =  "../Output/Virus/besmettelijk.json";
+        booleanNFA(it,b, title);
+        percentageNFA(it, name, title);
     }
     else if (rangeKeyENFA.accepts(it.key())){
         rangeNFA(it, name, title);
@@ -125,21 +127,21 @@ void Virus::booleanNFA(json::iterator &it, std::string &name, std::string &title
     n["type"] = "ENFA";
     n["eps"] = "Q";
 
-    if(integer == 1){
+    if(integer == 1) {
         n["alphabet"] = {"A", "Z", "H", "I"};
-        n["states"] = {{{"name", "0"}, {"starting", true}, {"accepting", false}},
-                       {{"name", "1"}, {"starting", false}, {"accepting", true}}};
-        n["transitions"] = {{{"from", "0"}, {"to", "1"}, {"input", "A"}},
-                            {{"from", "0"}, {"to", "1"}, {"input", "H"}},
-                            {{"from", "0"}, {"to", "1"}, {"input", "Z"}},
-                            {{"from", "0"}, {"to", "1"}, {"input", "I"}}};
+        n["states"] = {{{"name", 0}, {"starting", true},  {"accepting", false}},
+                       {{"name", 1}, {"starting", false}, {"accepting", true}}};
+        n["transitions"] = {{{"from", 0}, {"to", 1}, {"input", "A"}},
+                            {{"from", 0}, {"to", 1}, {"input", "H"}},
+                            {{"from", 0}, {"to", 1}, {"input", "Z"}},
+                            {{"from", 0}, {"to", 1}, {"input", "I"}}};
     }
     else {
         n["alphabet"] = {"A", "Z", "H", "I"};
-        n["states"] = {{{"name", "0"}, {"starting", true}, {"accepting", false}},
-                       {{"name", "1"}, {"starting", false}, {"accepting", true}}};
-        n["transitions"] = {{{"from", "0"}, {"to", "1"}, {"input", "H"}},
-                            {{"from", "0"}, {"to", "1"}, {"input", "Z"}}};
+        n["states"] = {{{"name", 0}, {"starting", true}, {"accepting", false}},
+                       {{"name", 1}, {"starting", false}, {"accepting", true}}};
+        n["transitions"] = {{{"from", 0}, {"to", 1}, {"input", "H"}},
+                            {{"from", 0}, {"to", 1}, {"input", "Z"}}};
     }
 
     std::ofstream o(name);

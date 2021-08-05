@@ -43,6 +43,7 @@ public:
     void tryEps(vector<int> &nodes);
     ENFA product(vector<ENFA> &enfas, int counter);
     bool smallerAccept(double input);
+    bool stringAccepts(std::string input);
 };
 
 
