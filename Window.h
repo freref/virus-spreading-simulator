@@ -33,10 +33,13 @@ public:
 private:
     void createActions();
     void createMenus();
+    void createOverlay();
 
     QMenu *fileMenu;
     QAction *exitAct;
     QAction *saveAct;
+    QPushButton *nextButton;
+    QPushButton *autoButton;
 };
 
 
