@@ -33,8 +33,21 @@ Window::Window(QWidget *parent, Simulatie &sim) : QMainWindow(parent){
 
     createActions();
     createMenus();
+    createOverlay();
 
     ui->draw(sim);
+}
+
+void Window::createOverlay(){
+    nextButton = new QPushButton(this);
+    nextButton->setText("Next Day");
+    nextButton->setGeometry(50,100,100,60);
+    connect(nextButton, &QPushButton::released, this, &Window::missClicked);
+
+    autoButton = new QPushButton(this);
+    autoButton->setText("Auto Simulate");
+    autoButton->setGeometry(50,180,100,60);
+    connect(autoButton, &QPushButton::released, this, &Window::doubleClicked);
 }
 
 void Window::createActions() {
@@ -74,10 +87,10 @@ void Window::rightClicked(int x, int y) {
 }
 
 void Window::missClicked() {
+    std::cout << "lol" << std::endl;
     s.simulate(1);
     ui->draw(s);
 }
-
 
 void Window::doubleClicked(){
     while(!s.autoSimulate()){

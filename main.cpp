@@ -17,11 +17,11 @@ int main(int argc, char *argv[]) {
     std::string world = "World/world1.json";
 
     Virus v(virus);
-    v.correctness();
+    //v.correctness();
     v.makeVirus(0);
 
     World w(world);
-    w.correctness();
+    //w.correctness();
     w.makeWorld();
 
     Simulatie sim(v, w);
