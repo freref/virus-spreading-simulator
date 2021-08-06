@@ -15,7 +15,7 @@ static std::string alphabet = "(a+b+c+d+e+f+g+h+i+j+k+l+m+n+o+p+q+r+s+t+u+v+w+x+
 static std::string numbers = "(1+2+3+4+5+6+7+8+9+0)";
 static std::string numbers_non_zero = "(1+2+3+4+5+6+7+8+9)";
 
-static RE validVirus = RE("besmettingsgraad%+sterftegraad%+incubatietijdN+asymptomatischB+mutatie%+mutatieR+infectieN", 'Q');
+static RE validVirus = RE("ziekte%+incubatietijdN+asymptomatischB+mutatie%+mutatieR+infectieN+recoveryN", 'Q');
 static RE validWorld = RE("populatieN+bevolkingsdictheidN+gezondheidsgraadZ+agrens%+zgrens%+hgrens%", 'Q');
 
 static RE percentageKey = RE(alphabet+"*(%)+("+alphabet+"(%))", 'Q');
