@@ -12,13 +12,13 @@
 
 class Statistiek {
 public:
-    string log;
+    map<int, map<string, int>> stats;
+    vector<string> names;
 
     Statistiek(){};
+    Statistiek(std::string name){ names = {name};};
 
-    void add(std::string line);
-    void update(World w);
-    void print();
+    string print();
 };
 
 #endif //VSS_STATISTIEK_H

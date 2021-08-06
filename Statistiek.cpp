@@ -4,29 +4,29 @@
 
 #include "Statistiek.h"
 
+string Statistiek::print(){
+    std::string output;
+    for(auto &pair : stats){
+        output += "Dag: " + to_string(pair.first) + "\n\n";
+        output += "Nieuwe gevallen:\n\n";
+        output += "Infecties: " + to_string(pair.second["infectie"]) + "\n";
+        output += "Genezen: " + to_string(pair.second["genezen"]) + "\n";
+        output += "Ziek: " + to_string(pair.second["ziek"]) + "\n";
+        output += "Asymptomatisch: " + to_string(pair.second["asymptomatisch"]) + "\n";
+        output += "Gestorven: " + to_string(pair.second["dood"]) + "\n";
+        output += "Gehospitaliseerd: " + to_string(pair.second["gehospitaliseerd"]) + "\n\n";
 
-
-void Statistiek::add(std::string line) {
-    log += line;
-}
-
-void Statistiek::update(World w) {
-    map<string, int> stats;
-
-    for(auto &row : w.grid){
-        for(auto &human : row){
-            stats[human->toestand] += 1;
+        if(pair.second["mutatie"] != 0){
+            output += "Het virus is geverifieerd door het TFA algoritme en er is een mutatie gedetecteerd\n";
+            output += "Het nieuwe virus heet: " + names[pair.second["naam"]] + "\n\n";
         }
+        else
+            output += "Er is geen mutatie gedetecteerd\n\n";
+
+        if(pair.first == 0){
+            output += "Virus startnaam: " + names[0] + "\n\n";
+        }
+        output += "============================================\n\n";
     }
-
-    log += "Gezond: " + to_string(stats["G"]) + "\n";
-    log += "Asymptomatisch: " + to_string(stats["A"]) + "\n";
-    log += "Incuberend: " + to_string(stats["I"]) + "\n";
-    log += "Ziek: " + to_string(stats["Z"]) + "\n";
-    log += "Gehospitaliseerd: " + to_string(stats["H"]) + "\n";
-    log += "Dood: " + to_string(stats["X"]) + "\n\n";
-}
-
-void Statistiek::print(){
-    std::cout << log << std::endl;
+    return output;
 }

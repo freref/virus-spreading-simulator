@@ -50,7 +50,8 @@ void Mens::calculateValues(Virus &v) {
     incubatie = (int)round(fabs(i_r(generator)));
 }
 
-void Mens::print() {
+string Mens::print() {
+    string output;
     string t;
     if(toestand == "G"){
         t = "Gezond";
@@ -71,24 +72,25 @@ void Mens::print() {
         t = "Incuberend";
     }
 
-    std::cout   << "==================================================" << std::endl;
+    output+= "=====================================\n";
 
     if(name.size() >= 7)
-        std::cout << "|| naam: " << name << "\t\t\t\t||" << std::endl;
+        output += "|| naam: " + name + "\t\t\t\t||\n";
     else
-        std::cout << "|| naam: " << name << "\t\t\t\t\t||" << std::endl;
+        output += "|| naam: " + name + "\t\t\t\t\t||\n" ;
 
-    std::cout << "|| leeftijd: " << age << "\t\t\t\t\t||" << std::endl;
+    output += "|| leeftijd: " + to_string(age) + "\t\t\t\t\t||\n";
     if(toestand != "H")
-        std::cout << "|| toestand: " << t << "\t\t\t\t||" << std::endl;
+        output += "|| toestand: " + t + "\t\t\t\t||\n";
     else
-        std::cout << "|| toestand: " << t << "\t\t\t||" << std::endl;
+        output += "|| toestand: " + t + "\t\t\t||\n";
 
-    std::cout<< "--------------------------------------------------" << std::endl
-    << "|| aantal keer geinfecteerd: " << infectie << "\t\t\t||" << std::endl
-    << "|| gezondheidsgraad: " << gezondheidsgraad << "\t\t\t||" << std::endl
-    << "|| duur tot genezing: " << recovery << "\t\t\t\t||" << std::endl
-    << "|| incubatie duur: " << incubatie << "\t\t\t\t||" << std::endl
-    << "|| tijd van infectie: " << it << "\t\t\t\t||" << std::endl
-    << "==================================================" << std::endl;
+    output += "--------------------------------------------------------------\n|| aantal keer geinfecteerd: " +
+            to_string(infectie) + "\t\t\t||\n|| gezondheidsgraad: " +
+            to_string(gezondheidsgraad) + "\t\t\t||\n|| duur tot genezing: " +
+            to_string(recovery) + "\t\t\t\t||\n|| incubatie duur: " +
+            to_string(incubatie) + "\t\t\t\t||\n|| tijd van infectie: " +
+            to_string(it) + "\t\t\t\t||\n=====================================\n";
+
+    return output;
 }
