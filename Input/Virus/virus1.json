@@ -1,0 +1,12 @@
+{
+  "asymptomatischB": 1,
+  "incubatietijdN": 6,
+  "infectieN": 1,
+  "mutatie%": 0,
+  "mutatieR": [
+    0.05,
+    0.15
+  ],
+  "recoveryN": 13,
+  "ziekte%": 0.5
+}

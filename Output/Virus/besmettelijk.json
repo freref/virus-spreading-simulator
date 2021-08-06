@@ -1,0 +1,44 @@
+{
+    "alphabet": [
+        "A",
+        "Z",
+        "H",
+        "I"
+    ],
+    "eps": "Q",
+    "states": [
+        {
+            "accepting": false,
+            "name": 0,
+            "starting": true
+        },
+        {
+            "accepting": true,
+            "name": 1,
+            "starting": false
+        }
+    ],
+    "transitions": [
+        {
+            "from": 0,
+            "input": "A",
+            "to": 1
+        },
+        {
+            "from": 0,
+            "input": "H",
+            "to": 1
+        },
+        {
+            "from": 0,
+            "input": "Z",
+            "to": 1
+        },
+        {
+            "from": 0,
+            "input": "I",
+            "to": 1
+        }
+    ],
+    "type": "ENFA"
+}
