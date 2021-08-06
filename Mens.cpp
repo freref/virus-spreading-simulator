@@ -75,22 +75,22 @@ string Mens::print() {
     output+= "=====================================\n";
 
     if(name.size() >= 7)
-        output += "|| naam: " + name + "\t\t\t\t||\n";
+        output += "   naam: " + name + "\t\t\t\t\n";
     else
-        output += "|| naam: " + name + "\t\t\t\t\t||\n" ;
+        output += "   naam: " + name + "\t\t\t\t\t\n" ;
 
-    output += "|| leeftijd: " + to_string(age) + "\t\t\t\t\t||\n";
+    output += "   leeftijd: " + to_string(age) + "\t\t\t\t\t\n";
     if(toestand != "H")
-        output += "|| toestand: " + t + "\t\t\t\t||\n";
+        output += "   toestand: " + t + "\t\t\t\t\n";
     else
-        output += "|| toestand: " + t + "\t\t\t||\n";
+        output += "   toestand: " + t + "\t\t\t\n";
 
-    output += "--------------------------------------------------------------\n|| aantal keer geinfecteerd: " +
-            to_string(infectie) + "\t\t\t||\n|| gezondheidsgraad: " +
-            to_string(gezondheidsgraad) + "\t\t\t||\n|| duur tot genezing: " +
-            to_string(recovery) + "\t\t\t\t||\n|| incubatie duur: " +
-            to_string(incubatie) + "\t\t\t\t||\n|| tijd van infectie: " +
-            to_string(it) + "\t\t\t\t||\n=====================================\n";
+    output += "--------------------------------------------------------------\n   aantal keer geinfecteerd: " +
+            to_string(infectie) + "\t\t\t  \n   gezondheidsgraad: " +
+            to_string(gezondheidsgraad) + "\t\t\t  \n   duur tot genezing: " +
+            to_string(recovery) + "\t\t\t\t  \n   incubatie duur: " +
+            to_string(incubatie) + "\t\t\t\t  \n   tijd van infectie: " +
+            to_string(it) + "\t\t\t\t\n=====================================\n";
 
     return output;
 }
