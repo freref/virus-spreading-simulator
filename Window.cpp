@@ -6,6 +6,7 @@
 #include <QMessageBox>
 #include <QtWidgets>
 #include <QTimer>
+#include <fstream>
 
 void delay(){
     QTime dieTime= QTime::currentTime().addSecs(1);
@@ -94,13 +95,8 @@ void Window::save() {
     if (fileName.isEmpty())
         return;
     else {
-        QFile file(fileName);
-        if (!file.open(QIODevice::WriteOnly)) {
-            QMessageBox::information(this, tr("Unable to open file"),
-                                     file.errorString());
-            return;
-        }
-        QDataStream out(&file);
-        out << QString("Test");
+        ofstream file(fileName.toStdString(), std::ofstream::out);
+        file << s.log.print();
+        file.close();
     }
 }

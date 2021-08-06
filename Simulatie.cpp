@@ -7,7 +7,7 @@
 Simulatie::Simulatie(Virus& vir, World& wereld) {
     virus = vir;
     world = wereld;
-    log = Statistiek();
+    log = Statistiek(vir.name);
 }
 
 void Simulatie::muteer(){
@@ -75,7 +75,11 @@ void Simulatie::muteer(){
         virus.reload(info);
         virus.makeVirus(counter);
         counter++;
-        confirmMutation();
+        if(confirmMutation()){
+            log.stats[it]["mutatie"] = 1;
+            log.names.push_back(virus.name);
+            log.stats[it]["naam"] = log.names.size()-1;
+        }
     }
 }
 
@@ -95,6 +99,7 @@ void Simulatie::infect(int x, int y) {
     double i = stod(i_string);
 
     if(m->infectie < i && m->toestand == "G"){
+        log.stats[it]["infectie"] += 1;
         muteer();
         m->toestand = "I";
         m->it = it;
@@ -121,11 +126,19 @@ void Simulatie::spread(Mens* human){
 }
 
 void Simulatie::simulate(int n){
+    log.stats[it]["infectie"] = 0;
+    log.stats[it]["genezen"] = 0;
+    log.stats[it]["asymptomatisch"] = 0;
+    log.stats[it]["ziek"] = 0;
+    log.stats[it]["gehosptialiseerd"] = 0;
+    log.stats[it]["dood"] = 0;
+
     for(int i = 0; i < n; i++){
         for(auto &row : world.grid){
             for(auto &human : row){
                 if(human->toestand != "G" && human->toestand != "X"){
                     if(it - human->it == human->incubatie + human->recovery){
+                        log.stats[it]["genezen"] += 1;
                         human->toestand = "G";
                     }
                     if(it - human->it == human->incubatie){
@@ -140,12 +153,20 @@ void Simulatie::simulate(int n){
 }
 
 bool Simulatie::autoSimulate(){
+    log.stats[it]["infectie"] = 0;
+    log.stats[it]["genezen"] = 0;
+    log.stats[it]["asymptomatisch"] = 0;
+    log.stats[it]["ziek"] = 0;
+    log.stats[it]["gehosptialiseerd"] = 0;
+    log.stats[it]["dood"] = 0;
+
     bool check = true;
     for(auto &row : world.grid){
         for(auto &human : row){
             if(human->toestand != "G" && human->toestand != "X"){
                 check = false;
                 if(it - human->it == human->incubatie + human->recovery){
+                    log.stats[it]["genezen"] += 1;
                     human->toestand = "G";
                 }
                 if(it - human->it == human->incubatie){
@@ -165,15 +186,19 @@ void Simulatie::breakout(Mens *m) {
     double sickness = m->gezondheidsgraad*z;
 
     if(sickness < world.agrens){
+        log.stats[it]["asymptomatisch"] += 1;
         m->toestand = "A";
     }
     else if (sickness < world.zgrens){
+        log.stats[it]["ziek"] += 1;
         m->toestand = "Z";
     }
     else if (sickness < world.hgrens){
+        log.stats[it]["gehospitaliseerd"] += 1;
         m->toestand = "H";
     }
     else{
+        log.stats[it]["dood"] += 1;
         m->toestand = "X";
     }
 }
