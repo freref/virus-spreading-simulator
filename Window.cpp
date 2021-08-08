@@ -9,7 +9,7 @@
 #include <fstream>
 
 void delay(){
-    QTime dieTime= QTime::currentTime().addSecs(1);
+    QTime dieTime= QTime::currentTime().addMSecs(300);
     while (QTime::currentTime() < dieTime)
         QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
 }
@@ -87,7 +87,6 @@ void Window::rightClicked(int x, int y) {
 }
 
 void Window::missClicked() {
-    std::cout << "lol" << std::endl;
     s.simulate(1);
     ui->draw(s);
 }
