@@ -3300,10 +3300,6 @@ C:/Qt/5.9.3/mingw53_32/include/QtGui/qwindowdefs_win.h
 QtGui/qtguiglobal.h
 -
 
-C:/Qt/5.9.3/mingw53_32/include/QtWidgets/QApplication
-qapplication.h
-C:/Qt/5.9.3/mingw53_32/include/QtWidgets/qapplication.h
-
 C:/Qt/5.9.3/mingw53_32/include/QtWidgets/QCommonStyle
 qcommonstyle.h
 C:/Qt/5.9.3/mingw53_32/include/QtWidgets/qcommonstyle.h
@@ -4790,19 +4786,11 @@ string
 set
 -
 
-C:/Users/Frederic/Documents/project/Correctness.cpp
-Correctness.h
-C:/Users/Frederic/Documents/project/Correctness.h
-
 C:/Users/Frederic/Documents/project/Correctness.h
 json.hpp
 C:/Users/Frederic/Documents/project/json.hpp
 Tools.h
 C:/Users/Frederic/Documents/project/Tools.h
-
-C:/Users/Frederic/Documents/project/Mens.cpp
-Mens.h
-C:/Users/Frederic/Documents/project/Mens.h
 
 C:/Users/Frederic/Documents/project/Mens.h
 string
@@ -4817,10 +4805,6 @@ Virus.h
 C:/Users/Frederic/Documents/project/Virus.h
 fstream
 C:/Users/Frederic/Documents/project/fstream
-
-C:/Users/Frederic/Documents/project/Simulatie.cpp
-Simulatie.h
-C:/Users/Frederic/Documents/project/Simulatie.h
 
 C:/Users/Frederic/Documents/project/Simulatie.h
 Virus.h
@@ -4839,10 +4823,6 @@ Statistiek.h
 C:/Users/Frederic/Documents/project/Statistiek.h
 unistd.h
 -
-
-C:/Users/Frederic/Documents/project/Statistiek.cpp
-Statistiek.h
-C:/Users/Frederic/Documents/project/Statistiek.h
 
 C:/Users/Frederic/Documents/project/Statistiek.h
 vector
@@ -4866,10 +4846,6 @@ QTime
 QCoreApplication
 -
 
-C:/Users/Frederic/Documents/project/UI.cpp
-UI.h
-C:/Users/Frederic/Documents/project/UI.h
-
 C:/Users/Frederic/Documents/project/UI.h
 QGraphicsScene
 -
@@ -4881,10 +4857,6 @@ Simulatie.h
 C:/Users/Frederic/Documents/project/Simulatie.h
 QLabel
 -
-
-C:/Users/Frederic/Documents/project/Virus.cpp
-Virus.h
-C:/Users/Frederic/Documents/project/Virus.h
 
 C:/Users/Frederic/Documents/project/Virus.h
 fstream
@@ -4932,10 +4904,6 @@ C:/Users/Frederic/Documents/project/UI.h
 Tools.h
 C:/Users/Frederic/Documents/project/Tools.h
 
-C:/Users/Frederic/Documents/project/World.cpp
-World.h
-C:/Users/Frederic/Documents/project/World.h
-
 C:/Users/Frederic/Documents/project/World.h
 json.hpp
 C:/Users/Frederic/Documents/project/json.hpp
@@ -4947,28 +4915,6 @@ fstream
 -
 ostream
 -
-
-C:/Users/Frederic/Documents/project/cmake-build-debug/VSS_autogen/EWIEGA46WW/moc_UI.cpp
-../../../UI.h
-C:/Users/Frederic/Documents/project/UI.h
-QtCore/qbytearray.h
--
-QtCore/qmetatype.h
--
-
-C:/Users/Frederic/Documents/project/cmake-build-debug/VSS_autogen/EWIEGA46WW/moc_Window.cpp
-../../../Window.h
-C:/Users/Frederic/Documents/project/Window.h
-QtCore/qbytearray.h
--
-QtCore/qmetatype.h
--
-
-C:/Users/Frederic/Documents/project/cmake-build-debug/VSS_autogen/mocs_compilation.cpp
-EWIEGA46WW/moc_UI.cpp
-C:/Users/Frederic/Documents/project/cmake-build-debug/VSS_autogen/EWIEGA46WW/moc_UI.cpp
-EWIEGA46WW/moc_Window.cpp
-C:/Users/Frederic/Documents/project/cmake-build-debug/VSS_autogen/EWIEGA46WW/moc_Window.cpp
 
 C:/Users/Frederic/Documents/project/json.hpp
 algorithm
@@ -5302,25 +5248,5 @@ cstring
 limits
 -
 type_traits
--
-
-C:/Users/Frederic/Documents/project/main.cpp
-iostream
--
-json.hpp
-C:/Users/Frederic/Documents/project/json.hpp
-Virus.h
-C:/Users/Frederic/Documents/project/Virus.h
-World.h
-C:/Users/Frederic/Documents/project/World.h
-Statistiek.h
-C:/Users/Frederic/Documents/project/Statistiek.h
-Simulatie.h
-C:/Users/Frederic/Documents/project/Simulatie.h
-QApplication
--
-Window.h
-C:/Users/Frederic/Documents/project/Window.h
-QLabel
 -
 

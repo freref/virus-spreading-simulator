@@ -87,7 +87,6 @@ void Window::rightClicked(int x, int y) {
 }
 
 void Window::missClicked() {
-    std::cout << "lol" << std::endl;
     s.simulate(1);
     ui->draw(s);
 }
