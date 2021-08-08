@@ -110,17 +110,33 @@ void Simulatie::infect(int x, int y) {
 
 void Simulatie::spread(Mens* human){
     if(ENFA("../Output/Virus/besmettelijk.json").accepts(human->toestand)){
-        if(it - human->it >= human->leftDistance){
-            infect(human->n.left.first, human->n.left.second);
+        if(ENFA("../Output/Virus/besmettelijk.json").accepts("A")){
+            if(it - human->it >= human->leftDistance){
+                infect(human->n.left.first, human->n.left.second);
+            }
+            if(it - human->it >= human->rightDistance){
+                infect(human->n.right.first, human->n.right.second);
+            }
+            if(it - human->it >= human->upDistance){
+                infect(human->n.up.first, human->n.up.second);
+            }
+            if(it - human->it >= human->downDistance){
+                infect(human->n.down.first, human->n.down.second);
+            }
         }
-        if(it - human->it >= human->rightDistance){
-            infect(human->n.right.first, human->n.right.second);
-        }
-        if(it - human->it >= human->upDistance){
-            infect(human->n.up.first, human->n.up.second);
-        }
-        if(it - human->it >= human->downDistance){
-            infect(human->n.down.first, human->n.down.second);
+        else {
+            if(it - (human->it+human->incubatie) >= human->leftDistance){
+                infect(human->n.left.first, human->n.left.second);
+            }
+            if(it - (human->it+human->incubatie) >= human->rightDistance){
+                infect(human->n.right.first, human->n.right.second);
+            }
+            if(it - (human->it+human->incubatie) >= human->upDistance){
+                infect(human->n.up.first, human->n.up.second);
+            }
+            if(it - (human->it+human->incubatie) >= human->downDistance){
+                infect(human->n.down.first, human->n.down.second);
+            }
         }
     }
 }
